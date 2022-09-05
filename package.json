@@ -1,0 +1,25 @@
+{
+	"name": "reui",
+	"author": "<paul@spaceyak.com>",
+	"license": "MIT",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"docs": "yarn workspace @reui/docs css --watch & yarn workspace @reui/docs start &",
+		"format": "prettier --ignore-unknown --write --loglevel=error",
+		"lint": "eslint . --cache --ext .cjs,.js,.ts,.tsx",
+		"tsc": "yarn workspaces foreach run tsc"
+	},
+	"workspaces": [
+		"packages/*"
+	],
+	"devDependencies": {
+		"@reui/eslint-plugin": "workspace:packages/eslint-plugin",
+		"@reui/tailwind": "workspace:packages/tailwind",
+		"eslint": "^8.23.0",
+		"lint-staged": "^13.0.3",
+		"prettier": "^2.7.1",
+		"prettier-plugin-tailwindcss": "^0.1.13",
+		"typescript": "^4.8.2"
+	}
+}

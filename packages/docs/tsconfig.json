@@ -1,0 +1,3 @@
+{
+	"extends": "@reui/tsconfig/main.json"
+}
