@@ -38,13 +38,13 @@ const config = {
 					sidebarPath: require.resolve('./sidebars.cjs'),
 					// Please change this to your repo.
 					// Remove this to remove the "edit this page" links.
-					editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+					editUrl: 'https://github.com/paularmstrong/reui/tree/main/packages/docs/',
 				},
 				blog: {
 					showReadingTime: true,
 					// Please change this to your repo.
 					// Remove this to remove the "edit this page" links.
-					editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+					editUrl: 'https://github.com/paularmstrong/reui/tree/main/packages/docs/',
 				},
 				theme: {
 					customCss: require.resolve('./src/css/custom.css'),
@@ -76,16 +76,11 @@ const config = {
 					src: 'img/logo.svg',
 				},
 				items: [
-					{
-						type: 'doc',
-						docId: 'intro',
-						position: 'left',
-						label: 'Tutorial',
-					},
+					{ to: '/docs', label: 'Documentation', position: 'left' },
 					{ to: '/components', label: 'Components', position: 'left' },
 					{ to: '/blog', label: 'Blog', position: 'right' },
 					{
-						href: 'https://github.com/facebook/docusaurus',
+						href: 'https://github.com/paularmstrong/reui',
 						label: 'GitHub',
 						position: 'right',
 					},
@@ -95,11 +90,11 @@ const config = {
 				style: 'dark',
 				links: [
 					{
-						title: 'Docs',
+						title: 'Documentation',
 						items: [
 							{
-								label: 'Tutorial',
-								to: '/docs/intro',
+								label: 'Introduction',
+								to: '/docs',
 							},
 						],
 					},
@@ -129,7 +124,7 @@ const config = {
 							},
 							{
 								label: 'GitHub',
-								href: 'https://github.com/facebook/docusaurus',
+								href: 'https://github.com/paularmstrong/reui',
 							},
 						],
 					},
