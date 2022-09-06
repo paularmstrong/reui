@@ -1,0 +1,48 @@
+# Theme
+
+import { Canvas } from '@site/src/components';
+import Theme from '@reui/tailwind';
+
+export function Chiclet(props) {
+	return (
+		<div
+			className="flex aspect-square w-full shrink basis-1/12 items-end justify-end rounded-md p-2 hover:ring-4 hover:ring-primary-500/30"
+			style={{ backgroundColor: props.colorValue, color: parseInt(props.value, 10) > 400 ? 'white' : 'black' }}
+		>
+			{props.value || ''}
+		</div>
+	);
+}
+
+export function Colors() {
+	return (
+		<div class="flex flex-col gap-4">
+			{Object.entries(Theme.theme.colors).map(([color, value]) => {
+				let children = null;
+				if (typeof value === 'string') {
+					children = <Chiclet name={color} colorValue={value} />;
+				} else {
+					children = (
+						<>
+							{Object.entries(value).map(([value, colorValue]) => (
+								<Chiclet key={value} name={color} value={value} colorValue={colorValue} />
+							))}
+						</>
+					);
+				}
+				return (
+					<div>
+						{color}
+						<div key={color} class="flex flex-row justify-between gap-2">
+							{children}
+						</div>
+					</div>
+				);
+			})}
+		</div>
+	);
+}
+
+<Canvas>
+	<Colors />
+</Canvas>
