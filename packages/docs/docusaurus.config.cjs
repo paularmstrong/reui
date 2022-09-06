@@ -1,6 +1,5 @@
 'use strict';
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
@@ -8,9 +7,9 @@ const path = require('path');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-	title: 'ReUI',
+	title: 'reUI',
 	tagline: 'Dinosaurs are cool',
-	url: 'https://your-docusaurus-test-site.com',
+	url: 'https://reui.dev',
 	baseUrl: '/',
 	onBrokenLinks: 'throw',
 	onBrokenMarkdownLinks: 'warn',
@@ -18,8 +17,8 @@ const config = {
 
 	// GitHub pages deployment config.
 	// If you aren't using GitHub pages, you don't need these.
-	organizationName: 'facebook', // Usually your GitHub org/user name.
-	projectName: 'docusaurus', // Usually your repo name.
+	organizationName: 'paularmstrong',
+	projectName: 'reui',
 
 	// Even if you don't use internalization, you can use this field to set useful
 	// metadata like html lang. For example, if your site is Chinese, you may want
@@ -70,9 +69,9 @@ const config = {
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
 			navbar: {
-				title: 'ReUI',
+				title: 'reUI',
 				logo: {
-					alt: 'ReUI Logo',
+					alt: 'reUI Logo',
 					src: 'img/logo.svg',
 				},
 				items: [
@@ -129,7 +128,7 @@ const config = {
 						],
 					},
 				],
-				copyright: `Copyright © ${new Date().getFullYear()} ReUI. Built with Docusaurus.`,
+				copyright: `Copyright © ${new Date().getFullYear()} reUI. Built with Docusaurus.`,
 			},
 			prism: {
 				theme: lightCodeTheme,
