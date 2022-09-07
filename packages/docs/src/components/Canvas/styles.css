@@ -1225,9 +1225,7 @@ video {
   background-color: rgb(110 117 130 / 0.3);
 }
 
-@media (prefers-color-scheme: dark) {
-  .dark\:bg-gray-900 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(19 31 48 / var(--tw-bg-opacity));
-  }
+.dark .dark\:bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(19 31 48 / var(--tw-bg-opacity));
 }

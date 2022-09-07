@@ -4,6 +4,7 @@ const baseConfig = require('@reui/tailwind');
 
 module.exports = {
 	...baseConfig,
+	darkMode: 'class',
 	content: [
 		'./src/**/*.tsx',
 		'./docs/**/*.{mdx,md}',
