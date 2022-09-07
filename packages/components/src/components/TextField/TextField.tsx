@@ -34,9 +34,10 @@ export function TextField({ leadingIcon: LeadingIcon, trailingIcon: TrailingIcon
 		<div className="w-full">
 			<div
 				className={clsx(
-					'flex h-14 items-center rounded border-2 border-gray-200 bg-white py-2 px-4',
+					'flex h-14 items-center rounded border-2 bg-white py-2 px-4',
 					isFocused && 'ring-4 ring-primary-500 ring-opacity-50',
-					props.isDisabled && 'cursor-not-allowed opacity-70'
+					props.isDisabled && 'cursor-not-allowed opacity-70',
+					props.errorMessage ? 'border-red-600' : 'border-gray-200'
 				)}
 			>
 				<label {...labelProps} className="flex grow items-center space-x-2">
@@ -46,7 +47,7 @@ export function TextField({ leadingIcon: LeadingIcon, trailingIcon: TrailingIcon
 						</div>
 					) : null}
 
-					<div className="relative flex grow items-center justify-items-stretch">
+					<div className="relative z-0 flex grow items-center justify-items-stretch">
 						<input
 							{...inputProps}
 							{...focusProps}
