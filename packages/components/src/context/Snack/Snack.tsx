@@ -18,21 +18,21 @@ const SnackContext = React.createContext<Context>({ addSnack: () => {}, removeSn
 function reducer(state: Array<Snack>, action: { type: 'ADD' | 'REMOVE'; snack: Snack }) {
 	const { snack, type } = action;
 	switch (type) {
-	case 'ADD': {
-		const newState = [...state];
-		newState.push(snack);
-		return newState;
-	}
-	case 'REMOVE': {
-		const index = state.indexOf(snack);
-
-		if (index > -1) {
+		case 'ADD': {
 			const newState = [...state];
-			newState.splice(index, 1);
+			newState.push(snack);
 			return newState;
 		}
-		return state;
-	}
+		case 'REMOVE': {
+			const index = state.indexOf(snack);
+
+			if (index > -1) {
+				const newState = [...state];
+				newState.splice(index, 1);
+				return newState;
+			}
+			return state;
+		}
 	}
 }
 

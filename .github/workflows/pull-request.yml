@@ -1,13 +1,36 @@
-name: On push
+name: Pull Request
 
-on:
-  push:
-    branches:
-      - main
+on: pull_request
 
 jobs:
   run_tests:
-    name: Typecheck, Test, Lint
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - run: yarn install
+
+      - name: Tests
+        run: yarn test
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-website-
+
+  typecheck:
+    name: Typecheck
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -24,15 +47,6 @@ jobs:
       - name: Typecheck
         run: yarn tsc
 
-      - name: Tests
-        run: yarn test
-
-      - name: Lint
-        run: yarn lint
-
-      - name: Format
-        run: yarn format --check --list-different .
-
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
@@ -41,13 +55,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-website-
 
-  deploy:
-    name: Deploy docs
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -60,16 +70,11 @@ jobs:
 
       - run: yarn install
 
-      - name: Build
-        run: yarn workspace @reui/docs build
+      - name: Lint
+        run: yarn lint
 
-      - name: Deploy documentation
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./packages/docs/dist
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+      - name: Format
+        run: yarn format --check .
 
       - name: Cache dependencies
         uses: actions/cache@v2
