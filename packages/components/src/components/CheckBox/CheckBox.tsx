@@ -71,7 +71,6 @@ export function CheckBox(props: CheckboxProps | CheckboxGroupProps) {
 								? `${errorMessage ? errorId : ''} ${description ? descriptionId : ''}`
 								: undefined
 						}
-						className="absolute left-48"
 						ref={ref}
 					/>
 				</VisuallyHidden>

@@ -546,10 +546,6 @@ video {
   pointer-events: none;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }
@@ -574,10 +570,6 @@ video {
   left: 12rem;
 }
 
-.top-full {
-  top: 100%;
-}
-
 .top-3 {
   top: 0.75rem;
 }
@@ -588,10 +580,6 @@ video {
 
 .left-0 {
   left: 0px;
-}
-
-.-left-5 {
-  left: -1.25rem;
 }
 
 .z-10 {
@@ -627,20 +615,12 @@ video {
   display: inline-flex;
 }
 
-.hidden {
-  display: none;
-}
-
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
 
 .h-4 {
   height: 1rem;
-}
-
-.h-6 {
-  height: 1.5rem;
 }
 
 .h-1 {
@@ -671,24 +651,12 @@ video {
   height: 2.5rem;
 }
 
-.max-h-72 {
-  max-height: 18rem;
-}
-
-.min-h-full {
-  min-height: 100%;
-}
-
 .w-full {
   width: 100%;
 }
 
 .w-4 {
   width: 1rem;
-}
-
-.w-6 {
-  width: 1.5rem;
 }
 
 .w-1 {
@@ -828,10 +796,6 @@ video {
 
 .overflow-auto {
   overflow: auto;
-}
-
-.overflow-y-scroll {
-  overflow-y: scroll;
 }
 
 .whitespace-nowrap {
@@ -989,10 +953,6 @@ video {
 .bg-primary-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(105 200 206 / var(--tw-bg-opacity));
-}
-
-.bg-\[url\(\'data\:image\/svg\+xml\;base64\2c PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiPjxwYXRoIGQ9Ik0uMDQuNjI3LjE0Ni41Mi40My44MDQuMzIzLjkxem0uMTc3LjE3N0wuODU0LjE2Ny45Ni4yNzMuMzIzLjkxeiIgc3R5bGU9ImZpbGw6Y3VycmVudGNvbG9yO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lIi8\+PC9zdmc\+\'\)\] {
-  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiPjxwYXRoIGQ9Ik0uMDQuNjI3LjE0Ni41Mi40My44MDQuMzIzLjkxem0uMTc3LjE3N0wuODU0LjE2Ny45Ni4yNzMuMzIzLjkxeiIgc3R5bGU9ImZpbGw6Y3VycmVudGNvbG9yO2ZpbGwtb3BhY2l0eToxO3N0cm9rZTpub25lIi8+PC9zdmc+');
 }
 
 .p-6 {
@@ -1189,11 +1149,6 @@ video {
 
 .ring-opacity-50 {
   --tw-ring-opacity: 0.5;
-}
-
-.blur {
-  --tw-blur: blur(8px);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition {
