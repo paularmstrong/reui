@@ -1,0 +1,24 @@
+# SnackProvider
+
+```tsx
+import { SnackProvider, SnackBar, useSnacks } from '@reui/components';
+
+function AppWrapper() {
+	return (
+		<SnackProvider>
+			<App />
+		</SnackProvider>
+	);
+}
+
+function App() {
+	const { addSnack } = useSnacks();
+
+	return (
+		<>
+			<SnackBar />
+			<Button onPress={() => addSnack({ children: 'Success!' })}>Submit</Button>
+		</>
+	);
+}
+```
