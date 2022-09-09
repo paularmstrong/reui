@@ -46,7 +46,6 @@ module.exports = {
 
 			overrides: [
 				{
-					// parser: '@babel/eslint-parser',
 					files: ['**/*.cjs'],
 					env: { node: true, commonjs: true },
 				},

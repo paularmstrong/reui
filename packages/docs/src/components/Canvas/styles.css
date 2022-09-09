@@ -745,7 +745,7 @@ video {
 
   100% {
     stroke-dasharray: 90, 150;
-    stroke-dashoffset: -124;
+    stroke-dashoffset: -125;
   }
 }
 
@@ -771,10 +771,6 @@ video {
 
 .flex-col {
   flex-direction: column;
-}
-
-.content-center {
-  align-content: center;
 }
 
 .items-start {

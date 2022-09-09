@@ -15,7 +15,7 @@ const config = {
 	testMatch: ['**/*.test.ts?(x)'],
 	transformIgnorePatterns: ['node_modules'],
 	transform: {
-		'\\.[jt]sx?$': ['babel-jest', { rootMode: 'upward' }],
+		'\\.[jt]sx?$': ['esbuild-jest', { sourcemap: true }],
 	},
 };
 

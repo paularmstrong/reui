@@ -9,13 +9,12 @@
 		"format": "prettier --ignore-unknown",
 		"lint": "eslint . --cache --ext .cjs,.js,.ts,.tsx",
 		"test": "jest",
-		"tsc": "yarn workspaces foreach run tsc"
+		"tsc": "yarn workspaces foreach run tsc --noEmit"
 	},
 	"workspaces": [
 		"packages/*"
 	],
 	"devDependencies": {
-		"@reui/babel-config": "workspace:packages/babel-config",
 		"@reui/eslint-plugin": "workspace:packages/eslint-plugin",
 		"@reui/tailwind": "workspace:packages/tailwind",
 		"@types/jest": "^29.0.0",
