@@ -31,7 +31,7 @@ jobs:
         run: yarn lint
 
       - name: Format
-        run: yarn format --check --list-different .
+        run: yarn format --check .
 
       - name: Cache dependencies
         uses: actions/cache@v2
