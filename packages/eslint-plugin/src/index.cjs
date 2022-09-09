@@ -20,7 +20,7 @@ module.exports = {
 			rules: {
 				'no-console': 'error',
 				'no-undef': 'off',
-				indent: ['error', 'tab'],
+				indent: 'off', // prettier instead
 
 				'@typescript-eslint/ban-ts-comment': 'off', // sometimes you're smarter
 				'@typescript-eslint/no-unused-vars': ['error', { ignoreRestSiblings: true }],
@@ -58,6 +58,14 @@ module.exports = {
 						react: {
 							version: 'detect',
 						},
+					},
+				},
+				{
+					files: ['**/*.test.tsx', '**/*.test.ts'],
+					plugins: ['jest'],
+					extends: ['plugin:jest/recommended'],
+					rules: {
+						'jest/consistent-test-it': ['error', { fn: 'test' }],
 					},
 				},
 			],
