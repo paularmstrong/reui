@@ -27,15 +27,17 @@ export function Switch({ labelPosition = 'after', ...props }: Props) {
 			<div className="relative mr-1 h-5 w-8 self-center">
 				<div
 					className={clsx(
-						'absolute top-1 h-3 w-full rounded-full shadow-inner',
-						!state.isSelected ? 'bg-gray-300' : 'bg-primary-300'
+						'absolute top-1 h-3 w-full rounded-full shadow-inner transition-colors duration-150',
+						!state.isSelected ? 'bg-gray-300 dark:bg-gray-500' : 'bg-primary-300 dark:bg-primary-700'
 					)}
 				/>
 				<div
 					className={clsx(
-						'absolute inset-y-0 left-0 h-5 w-5 rounded-full shadow-md ring-opacity-50 transition-all duration-150',
-						isFocusVisible && 'ring-4 ring-primary-500',
-						state.isSelected ? 'translate-x-full bg-primary-600' : '-translate-x-2 bg-white'
+						'absolute inset-y-0 left-0 h-5 w-5 rounded-full border shadow-md transition-all duration-150',
+						isFocusVisible && 'ring-4 ring-primary-500/50 dark:ring-primary-400/50',
+						state.isSelected
+							? 'translate-x-full border-primary-600 bg-primary-600 dark:border-primary-400 dark:bg-primary-400'
+							: '-translate-x-2 border-gray-100 bg-white dark:border-gray-100'
 					)}
 				/>
 			</div>

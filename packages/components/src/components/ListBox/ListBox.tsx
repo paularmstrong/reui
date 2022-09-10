@@ -76,12 +76,12 @@ function Option({ item, state }: OptionProps) {
 			{...optionProps}
 			ref={ref}
 			className={clsx(
-				'flex cursor-default items-center justify-between rounded-md p-2 text-sm text-gray-700 outline-none',
-				isFocused && 'bg-primary-500/10',
+				'flex cursor-default items-center justify-between rounded-md p-2 text-sm text-gray-800 outline-none dark:text-gray-300',
+				isFocused && 'bg-primary-500/10 dark:bg-primary-500/40',
 				isSelected && 'font-bold',
 				{
-					'text-gray-200': isDisabled,
-					'text-primary-600': isFocused || isSelected,
+					'text-gray-700 dark:text-gray-300': isDisabled,
+					'text-primary-600 dark:text-primary-400': isFocused || isSelected,
 				}
 			)}
 		>

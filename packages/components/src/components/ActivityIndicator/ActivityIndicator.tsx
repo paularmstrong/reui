@@ -21,7 +21,7 @@ export function ActivityIndicator(props: Props) {
 					cy="25"
 					r="20"
 					fill="none"
-					className="animate-stroke stroke-primary-600 stroke-[0.33rem]"
+					className="animate-stroke stroke-primary-600 stroke-[0.33rem] dark:stroke-primary-400"
 					strokeLinecap="round"
 				/>
 			</svg>

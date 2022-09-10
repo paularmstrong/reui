@@ -34,15 +34,15 @@ export function TextField({ leadingIcon: LeadingIcon, trailingIcon: TrailingIcon
 		<div className="w-full">
 			<div
 				className={clsx(
-					'flex h-14 items-center rounded border-2 bg-white py-2 px-4',
-					isFocused && 'ring-4 ring-primary-500 ring-opacity-50',
+					'flex h-14 items-center rounded border-2 bg-white py-2 px-4 dark:bg-gray-800',
+					isFocused && 'ring-4 ring-primary-500/50 dark:ring-primary-400/50',
 					props.isDisabled && 'cursor-not-allowed opacity-70',
-					props.errorMessage ? 'border-red-600' : 'border-gray-200'
+					props.errorMessage ? 'border-red-600 dark:border-red-400' : 'border-gray-200 dark:border-gray-600'
 				)}
 			>
 				<label {...labelProps} className="flex grow items-center space-x-2">
 					{LeadingIcon ? (
-						<div aria-hidden className="h-full w-10">
+						<div aria-hidden className="h-full w-4 text-gray-800 dark:text-gray-300">
 							<LeadingIcon />
 						</div>
 					) : null}
@@ -57,13 +57,13 @@ export function TextField({ leadingIcon: LeadingIcon, trailingIcon: TrailingIcon
 
 						<div
 							className={clsx(
-								'absolute top-3 inline-flex transform gap-1 rounded bg-white transition-[font-size,color,transform] duration-100 ease-in-out',
-								(isFocused || hasValue) && '-translate-y-2 text-xs font-medium text-primary-700'
+								'absolute top-3 inline-flex transform gap-1 rounded bg-white transition-[font-size,color,transform] duration-100 ease-in-out dark:bg-gray-800',
+								(isFocused || hasValue) && '-translate-y-2 text-xs font-medium text-primary-700 dark:text-primary-300'
 							)}
 						>
 							{props.label}
 							{props.isRequired ? (
-								<span aria-hidden className="text-red-600">
+								<span aria-hidden className="text-red-600 dark:text-red-400">
 									*
 								</span>
 							) : null}
@@ -71,7 +71,7 @@ export function TextField({ leadingIcon: LeadingIcon, trailingIcon: TrailingIcon
 					</div>
 
 					{TrailingIcon ? (
-						<div aria-hidden className="h-10 w-10">
+						<div aria-hidden className="h-full w-4 text-gray-800 dark:text-gray-300">
 							<TrailingIcon />
 						</div>
 					) : null}
@@ -83,7 +83,7 @@ export function TextField({ leadingIcon: LeadingIcon, trailingIcon: TrailingIcon
 				</div>
 			) : null}
 			{props.errorMessage ? (
-				<div {...errorMessageProps} className="pl-3 pt-1 text-sm text-red-600">
+				<div {...errorMessageProps} className="pl-3 pt-1 text-sm text-red-600 dark:text-red-400">
 					{props.errorMessage}
 				</div>
 			) : null}

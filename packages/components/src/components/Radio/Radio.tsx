@@ -41,11 +41,13 @@ export function Radio(props: AriaRadioProps) {
 				<div
 					className={clsx(
 						'flex h-4 w-4 items-center justify-center rounded-full border-2 transition-colors duration-150',
-						isFocusVisible && 'ring-4 ring-primary-500 ring-opacity-50',
-						isSelected ? 'border-primary-500 bg-primary-500' : 'border-gray-300 bg-white shadow-inner'
+						isFocusVisible && 'ring-4 ring-primary-500/50 dark:ring-primary-400/50',
+						isSelected
+							? 'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400'
+							: 'border-gray-300 bg-white shadow-inner dark:border-gray-400 dark:bg-gray-600'
 					)}
 				>
-					{isSelected ? <div className="h-1 w-1 rounded-full bg-white" /> : null}
+					{isSelected ? <div className="h-1 w-1 rounded-full bg-white dark:bg-gray-800" /> : null}
 				</div>
 			</div>
 

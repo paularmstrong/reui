@@ -30,7 +30,7 @@ export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(function P
 				{...overlayProps}
 				style={style}
 				ref={ref}
-				className="absolute z-10 mt-2 w-full overflow-auto rounded-md border border-gray-100 bg-white shadow-lg"
+				className="absolute z-10 mt-2 w-full overflow-auto rounded-md border border-gray-100 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-800"
 			>
 				{children}
 				<DismissButton onDismiss={onClose} />
