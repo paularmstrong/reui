@@ -3,6 +3,30 @@ name: Pull Request
 on: pull_request
 
 jobs:
+  housekeeping:
+    name: Housekeeping
+    runs-on: ubuntu-latest
+    steps:
+      - uses: amannn/action-semantic-pull-request@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: |
+            fix
+            feat
+            infra
+            perf
+            chore
+            test
+            docs
+            refactor
+          scopes: |
+            repo
+            components
+            theme
+            docs
+          requireScope: true
+
   run_tests:
     name: Tests
     runs-on: ubuntu-latest
