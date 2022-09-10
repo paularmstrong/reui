@@ -4,11 +4,11 @@ import { Snack } from './Snack';
 import { useSnacks } from './SnackContext';
 import type { SnackDef } from './SnackContext';
 
-interface Props {
+interface SnackBarProps {
 	position?: 'top-left' | 'top-center' | 'top-right' | 'bottom-left' | 'bottom-center' | 'bottom-right';
 }
 
-export function SnackBar({ position = 'bottom-center' }: Props) {
+export function SnackBar({ position = 'bottom-center' }: SnackBarProps) {
 	const { removeSnack, snacks } = useSnacks();
 	const [visible, setVisible] = React.useState<SnackDef | null>(null);
 

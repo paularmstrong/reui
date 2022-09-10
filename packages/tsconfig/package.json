@@ -1,7 +1,0 @@
-{
-	"name": "@reui/tsconfig",
-	"private": true,
-	"license": "MIT",
-	"author": "<paul@spaceyak.com>",
-	"packageManager": "yarn@3.2.3"
-}

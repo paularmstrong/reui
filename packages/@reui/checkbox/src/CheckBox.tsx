@@ -19,11 +19,11 @@ const CheckBoxContext = React.createContext<CheckboxGroupState>(
 	null
 );
 
-interface GroupProps extends AriaCheckboxGroupProps {
+interface CheckBoxGroupProps extends AriaCheckboxGroupProps {
 	children: Array<React.ReactElement<AriaCheckboxProps>>;
 }
 
-export function CheckBoxGroup({ children, ...props }: GroupProps) {
+export function CheckBoxGroup({ children, ...props }: CheckBoxGroupProps) {
 	const state = useCheckboxGroupState(props);
 	const { groupProps, labelProps } = useCheckboxGroup(props, state);
 
@@ -35,13 +35,13 @@ export function CheckBoxGroup({ children, ...props }: GroupProps) {
 	);
 }
 
-interface Props {
+interface CheckBoxSharedProps {
 	value: string;
 	errorMessage?: React.ReactNode;
 	description?: React.ReactNode;
 }
-type CheckboxProps = Props & AriaCheckboxProps;
-type CheckboxGroupProps = Props & AriaCheckboxGroupItemProps;
+type CheckboxProps = CheckBoxSharedProps & AriaCheckboxProps;
+type CheckboxGroupProps = CheckBoxSharedProps & AriaCheckboxGroupItemProps;
 
 export function CheckBox(props: CheckboxProps | CheckboxGroupProps) {
 	const groupState = React.useContext(CheckBoxContext);

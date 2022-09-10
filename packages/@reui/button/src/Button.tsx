@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 type Color = 'primary' | 'red' | 'green' | 'gray';
 
-interface Props extends AriaButtonProps {
+interface SharedButtonProps extends AriaButtonProps {
 	color?: Color;
 	buttonStyle?: 'primary' | 'secondary' | 'plain';
 }
@@ -16,7 +16,7 @@ const ButtonElement = {
 	plain: PlainButton,
 };
 
-export function Button({ buttonStyle = 'primary', ...props }: Props) {
+export function Button({ buttonStyle = 'primary', ...props }: SharedButtonProps) {
 	const Element = ButtonElement[buttonStyle];
 	return <Element {...props} />;
 }

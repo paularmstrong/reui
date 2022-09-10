@@ -16,7 +16,8 @@
 	"dependencies": {
 		"@reui/icons": "workspace:packages/@reui/icons",
 		"@reui/listbox": "workspace:packages/@reui/listbox",
-		"@reui/popover": "workspace:packages/@reui/popover"
+		"@reui/popover": "workspace:packages/@reui/popover",
+		"clsx": "^1.2.1"
 	},
 	"devDependencies": {
 		"react-aria": "^3.19.0",

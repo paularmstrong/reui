@@ -2,7 +2,7 @@ import * as React from 'react';
 import clsx from 'clsx';
 import root from 'react-shadow';
 import styles from '!raw-loader!./styles.css';
-import { IconProvider } from 'reui';
+import { IconProvider } from '@reui/reui';
 import { CheckIcon, ChevronUpDownIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid';
 import { useColorMode } from '@docusaurus/theme-common';
 

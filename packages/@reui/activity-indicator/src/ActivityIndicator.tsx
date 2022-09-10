@@ -3,11 +3,11 @@ import clsx from 'clsx';
 import { useId } from 'react-aria';
 import type { AriaProgressCircleProps } from '@react-types/progress';
 
-interface Props extends AriaProgressCircleProps {
+interface ActivityIndicatorProps extends AriaProgressCircleProps {
 	children?: React.ReactNode;
 }
 
-export function ActivityIndicator(props: Props) {
+export function ActivityIndicator(props: ActivityIndicatorProps) {
 	const labelId = useId();
 	return (
 		<div

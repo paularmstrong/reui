@@ -3,12 +3,12 @@ import { useFocus, useTextField } from 'react-aria';
 import type { AriaTextFieldProps } from 'react-aria';
 import clsx from 'clsx';
 
-interface Props extends AriaTextFieldProps {
+interface TextFieldProps extends AriaTextFieldProps {
 	leadingIcon?: React.ComponentType<any>;
 	trailingIcon?: React.ComponentType<any>;
 }
 
-export function TextField({ leadingIcon: LeadingIcon, trailingIcon: TrailingIcon, ...props }: Props) {
+export function TextField({ leadingIcon: LeadingIcon, trailingIcon: TrailingIcon, ...props }: TextFieldProps) {
 	function handleChange(value: string) {
 		setHasValue(!!value);
 		props.onChange && props.onChange(value);

@@ -4,11 +4,11 @@ import { useFocusRing, useSwitch, VisuallyHidden } from 'react-aria';
 import { useToggleState } from 'react-stately';
 import type { AriaSwitchProps } from 'react-aria';
 
-interface Props extends AriaSwitchProps {
+interface SwitchProps extends AriaSwitchProps {
 	labelPosition?: 'before' | 'after';
 }
 
-export function Switch({ labelPosition = 'after', ...props }: Props) {
+export function Switch({ labelPosition = 'after', ...props }: SwitchProps) {
 	const ref = React.useRef<HTMLInputElement>(null);
 	const state = useToggleState(props);
 	const { inputProps } = useSwitch(props, state, ref);

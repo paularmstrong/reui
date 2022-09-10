@@ -14,7 +14,8 @@
 	},
 	"homepage": "https://reui.dev/components/@reui/checkbox",
 	"dependencies": {
-		"@reui/icons": "workspace:packages/@reui/icons"
+		"@reui/icons": "workspace:packages/@reui/icons",
+		"clsx": "^1.2.1"
 	},
 	"devDependencies": {
 		"react-aria": "^3.19.0",

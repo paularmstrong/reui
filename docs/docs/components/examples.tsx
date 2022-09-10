@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, SnackBar, useSnacks, Item, SelectField } from 'reui';
+import { Button, SnackBar, useSnacks, Item, SelectField } from '@reui/reui';
 
 export function SelectFieldExample(props: React.ComponentProps<typeof SelectField>) {
 	return (

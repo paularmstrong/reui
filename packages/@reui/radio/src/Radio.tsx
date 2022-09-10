@@ -10,11 +10,11 @@ const RadioContext = React.createContext<RadioGroupState>(
 	null
 );
 
-interface GroupProps extends AriaRadioGroupProps {
+interface RadioGroupProps extends AriaRadioGroupProps {
 	children: Array<React.ReactElement<AriaRadioProps>>;
 }
 
-export function RadioGroup({ children, ...props }: GroupProps) {
+export function RadioGroup({ children, ...props }: RadioGroupProps) {
 	const state = useRadioGroupState(props);
 	const { radioGroupProps, labelProps } = useRadioGroup(props, state);
 

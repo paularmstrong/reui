@@ -13,6 +13,9 @@
 		"url": "https://github.com/paularmstrong/reui"
 	},
 	"homepage": "https://reui.dev/components/@reui/radio",
+	"dependencies": {
+		"clsx": "^1.2.1"
+	},
 	"devDependencies": {
 		"react-aria": "^3.19.0",
 		"react-stately": "^3.17.0"
