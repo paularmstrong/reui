@@ -1,0 +1,56 @@
+# Button
+
+import { Canvas } from '@site/src/components';
+import { Button } from 'reui';
+
+## Primary
+
+<Canvas>
+	<div className="flex flex-row gap-4">
+		<Button>Primary</Button>
+		<Button color="red">Danger</Button>
+		<Button color="green">Good stuff</Button>
+		<Button color="gray">Uncertain</Button>
+		<Button isDisabled>Disabled</Button>
+	</div>
+</Canvas>
+
+## Secondary
+
+<Canvas>
+	<div className="flex flex-row gap-4">
+		<Button buttonStyle="secondary">Primary</Button>
+		<Button buttonStyle="secondary" color="red">
+			Danger
+		</Button>
+		<Button buttonStyle="secondary" color="green">
+			Good stuff
+		</Button>
+		<Button buttonStyle="secondary" color="gray">
+			Uncertain
+		</Button>
+		<Button buttonStyle="secondary" isDisabled>
+			Disabled
+		</Button>
+	</div>
+</Canvas>
+
+## Plain
+
+<Canvas>
+	<div className="flex flex-row gap-4">
+		<Button buttonStyle="plain">Primary</Button>
+		<Button buttonStyle="plain" color="red">
+			Danger
+		</Button>
+		<Button buttonStyle="plain" color="green">
+			Good stuff
+		</Button>
+		<Button buttonStyle="plain" color="gray">
+			Uncertain
+		</Button>
+		<Button buttonStyle="plain" isDisabled>
+			Disabled
+		</Button>
+	</div>
+</Canvas>

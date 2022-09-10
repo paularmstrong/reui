@@ -1,0 +1,29 @@
+{
+	"name": "@reui/popover",
+	"version": "0.0.0",
+	"description": "reUI Popover component",
+	"license": "MIT",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"source": "./src/index.ts",
+	"sideEffects": false,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/paularmstrong/reui"
+	},
+	"homepage": "https://reui.dev/components/@reui/popover",
+	"devDependencies": {
+		"react-aria": "^3.19.0",
+		"react-stately": "^3.17.0"
+	},
+	"peerDependencies": {
+		"react": "^18",
+		"react-aria": "^3",
+		"react-stately": "^3",
+		"tailwindcss": "^3"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

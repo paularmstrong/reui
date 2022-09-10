@@ -1,25 +1,31 @@
 {
-	"name": "reui",
+	"name": "reui-monorepo",
 	"author": "<paul@spaceyak.com>",
 	"license": "MIT",
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"docs": "yarn workspace @reui/docs css --watch & yarn workspace @reui/docs start &",
+		"docs": "yarn workspace docs css --watch & yarn workspace docs start &",
 		"format": "prettier --ignore-unknown",
 		"lint": "eslint . --cache --ext .cjs,.js,.ts,.tsx",
 		"test": "jest",
 		"tsc": "yarn workspaces foreach run tsc --noEmit"
 	},
 	"workspaces": [
-		"packages/*"
+		"docs",
+		"packages/*",
+		"packages/@reui/*"
 	],
 	"devDependencies": {
 		"@reui/eslint-plugin": "workspace:packages/eslint-plugin",
-		"@reui/tailwind": "workspace:packages/tailwind",
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^13.4.0",
 		"@types/jest": "^29.0.0",
+		"esbuild": "^0.15.7",
+		"esbuild-jest": "^0.5.0",
 		"eslint": "^8.23.0",
 		"jest": "^29.0.2",
+		"jest-environment-jsdom": "^29.0.2",
 		"lint-staged": "^13.0.3",
 		"prettier": "^2.7.1",
 		"prettier-plugin-tailwindcss": "^0.1.13",

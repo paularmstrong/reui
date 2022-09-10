@@ -5,5 +5,5 @@ module.exports = {
 	singleQuote: true,
 	useTabs: true,
 	plugins: [require('prettier-plugin-tailwindcss')],
-	tailwindConfig: require.resolve('@reui/tailwind/src/index.cjs'),
+	tailwindConfig: require.resolve('@reui/tailwind-config'),
 };

@@ -2,4 +2,4 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 yarn lint-staged
-git add packages/docs/src/components/Canvas/styles.css
+git add docs/src/components/Canvas/styles.css
