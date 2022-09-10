@@ -76,6 +76,9 @@ jobs:
 
       - run: yarn install
 
+      - name: Build
+        run: yarn build
+
       - name: Typecheck
         run: yarn tsc
 
