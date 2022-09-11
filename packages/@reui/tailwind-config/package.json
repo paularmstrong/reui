@@ -1,0 +1,22 @@
+{
+	"name": "@reui/tailwind-config",
+	"version": "0.0.0",
+	"description": "reUI base Tailwindcss theme configuration",
+	"license": "MIT",
+	"author": "<paul@spaceyak.com>",
+	"packageManager": "yarn@3.2.3",
+	"main": "./dist/index.cjs",
+	"source": "./src/index.cjs",
+	"sideEffects": false,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/paularmstrong/reui"
+	},
+	"homepage": "https://reui.dev/components/@reui/tailwind-config",
+	"peerDependencies": {
+		"tailwindcss": "^3"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

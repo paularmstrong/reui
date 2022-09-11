@@ -29,6 +29,9 @@ jobs:
 
       - run: yarn install
 
+      - name: Build
+        run: yarn build
+
       - name: Typecheck
         run: yarn tsc
 
@@ -69,12 +72,12 @@ jobs:
       - run: yarn install
 
       - name: Build
-        run: yarn workspace @reui/docs build
+        run: yarn workspace docs build
 
       - name: Deploy documentation
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./packages/docs/dist
+          publish_dir: ./docs/dist
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'

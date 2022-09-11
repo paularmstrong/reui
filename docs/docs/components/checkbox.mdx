@@ -1,0 +1,30 @@
+# CheckBox
+
+import { Canvas } from '@site/src/components';
+import { CheckBox, CheckBoxGroup } from '@reui/reui';
+
+<Canvas>
+	<div className="flex flex-col gap-4">
+		<CheckBox value="burritos">Burritos</CheckBox>
+		<CheckBox
+			value="tacos"
+			isRequired
+			errorMessage="This field is required"
+			description="Sometimes a checkbox needs a little more context."
+		>
+			Tacos
+		</CheckBox>
+	</div>
+</Canvas>
+
+## CheckboxGroup
+
+<Canvas>
+	<CheckBoxGroup label="Pick a food">
+		<CheckBox value="burritos">Burritos</CheckBox>
+		<CheckBox value="tacos">Tacos</CheckBox>
+		<CheckBox isDisabled value="chocotaco">
+			ChocoTaco
+		</CheckBox>
+	</CheckBoxGroup>
+</Canvas>

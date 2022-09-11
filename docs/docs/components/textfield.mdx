@@ -1,0 +1,20 @@
+# TextField
+
+import { Canvas } from '@site/src/components';
+import { TextField } from '@reui/reui';
+import { CheckIcon, LinkIcon } from '@heroicons/react/24/solid';
+
+<Canvas>
+	<div className="flex flex-col gap-4">
+		<TextField label="This is a text field" />
+		<TextField label="This is is required" isRequired />
+		<TextField label="This is has a placeholder" placeholder="I am a placeholder" />
+		<TextField label="This is a text field" description="With a helper/description because forms are confusing." />
+		<TextField
+			leadingIcon={LinkIcon}
+			label="This is a text field"
+			errorMessage="This field has an error that needs fixing."
+			trailingIcon={CheckIcon}
+		/>
+	</div>
+</Canvas>

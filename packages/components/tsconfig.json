@@ -1,9 +1,0 @@
-{
-	"extends": "@reui/tsconfig/main.json",
-	"exclude": ["node_modules", "dist"],
-	"include": ["./src/**/*"],
-	"compilerOptions": {
-		"types": ["@types/jest", "@testing-library/jest-dom"],
-		"outDir": "dist"
-	}
-}

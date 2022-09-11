@@ -2,4 +2,5 @@
 .yarn
 node_modules/*
 .docusaurus
-packages/docs/src/components/Canvas/styles.css
+docs/src/components/Canvas/styles.css
+dist
