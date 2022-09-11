@@ -20,7 +20,7 @@ export function TextField({ leadingIcon: LeadingIcon, trailingIcon: TrailingIcon
 		ref
 	);
 	const [isFocused, setFocus] = React.useState(false);
-	const [hasValue, setHasValue] = React.useState(false);
+	const [hasValue, setHasValue] = React.useState(Boolean(props.defaultValue || props.value));
 	const { focusProps } = useFocus({
 		onFocus() {
 			setFocus(true);
