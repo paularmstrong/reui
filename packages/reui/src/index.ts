@@ -5,7 +5,7 @@ export { IconProvider, useIcons } from '@reui/icons';
 export { ListBox } from '@reui/listbox';
 export { Popover } from '@reui/popover';
 export { Radio, RadioGroup } from '@reui/radio';
-export { SelectField } from '@reui/selectfield';
+export { Item, SelectField } from '@reui/selectfield';
 export { Snack, SnackBar, SnackProvider, useSnacks } from '@reui/snackbar';
 export { Switch } from '@reui/switch';
 export { TextField } from '@reui/textfield';
