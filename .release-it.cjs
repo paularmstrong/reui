@@ -5,13 +5,10 @@ module.exports = {
 		commitMessage: 'chore: release v${version}',
 		requireCleanWorkingDir: true,
 	},
-	github: {
-		release: true,
-	},
 	plugins: {
 		'@release-it-plugins/workspaces': {
 			skipChecks: true,
-			workspaces: ['./packages/@reui/*', './packages/reui'],
+			workspaces: ['packages/@reui/*', 'packages/reui'],
 		},
 		'@release-it/conventional-changelog': {
 			preset: 'conventionalcommits',
@@ -24,4 +21,5 @@ module.exports = {
 		'before:init': ['yarn build'],
 	},
 	npm: false,
+	github: false,
 };
