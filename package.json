@@ -11,7 +11,7 @@
 		"docs": "yarn workspace docs css --watch & yarn workspace docs start &",
 		"format": "prettier --ignore-unknown",
 		"lint": "eslint . --cache --ext .cjs,.js,.ts,.tsx",
-		"pre-release": "release-it --preRelease=alpha --github.preRelease --npm.tag=canary",
+		"pre-release": "release-it --preRelease=alpha --github.preRelease",
 		"release": "release-it",
 		"test": "jest"
 	},
@@ -44,5 +44,6 @@
 		"release-it": "^15.4.1",
 		"rimraf": "^3.0.2",
 		"typescript": "~4.7.0"
-	}
+	},
+	"version": "0.1.0-alpha.0"
 }
