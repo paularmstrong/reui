@@ -1,6 +1,7 @@
 {
 	"name": "@reui/eslint-plugin",
 	"version": "0.0.0",
+	"private": true,
 	"license": "MIT",
 	"type": "commonjs",
 	"main": "src/index.cjs",

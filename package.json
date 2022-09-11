@@ -11,7 +11,7 @@
 		"docs": "yarn workspace docs css --watch & yarn workspace docs start &",
 		"format": "prettier --ignore-unknown",
 		"lint": "eslint . --cache --ext .cjs,.js,.ts,.tsx",
-		"prerelease": "build",
+		"pre-release": "release-it --preRelease=alpha --github.preRelease --npm.tag=canary",
 		"release": "release-it",
 		"test": "jest"
 	},
