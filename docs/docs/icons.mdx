@@ -1,0 +1,63 @@
+# Icons
+
+import { Canvas } from '@site/src/components';
+import { CheckIcon, ChevronUpDownIcon, ChevronDownIcon, ChevronUpIcon, LinkIcon } from '@heroicons/react/24/solid';
+import { IconProvider, TextField } from '@reui/reui';
+
+reUI components have a minimum set of required icons that must be provided in order to be rendered. [Hero Icons](https://heroicons.com/) provides a great starter set to get up and running quickly:
+
+```tsx
+import { IconProvider } from '@reui/reui';
+import { CheckIcon, ChevronUpDownIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid';
+
+export function App() {
+	return (
+		<IconProvider
+			value={{
+				CheckIcon,
+				ChevronDownIcon,
+				ChevronUpIcon,
+				ChevronUpDownIcon,
+			}}
+		>
+			<TheRestOfMyApplication />
+		</IconProvider>
+	);
+}
+
+render(<App />);
+```
+
+At a minimum, the following are required:
+
+| Name            | Example                                                  | Usage                                                  |
+| --------------- | -------------------------------------------------------- | ------------------------------------------------------ |
+| CheckIcon       | <Canvas><CheckIcon className="w-6 h-6" /></Canvas>       | [CheckBoxes](components/checkbox)                      |
+| ChevronDownIcon | <Canvas><ChevronDownIcon className="w-6 h-6" /></Canvas> | [SelectField](components/selectfield) in default state |
+| ChevronUpIcon   | <Canvas><ChevronUpIcon className="w-6 h-6" /></Canvas>   | [SelectField](components/selectfield) in open state    |
+
+Additionally, extra icons can be provided and use in various other locations. For example, many components accept a `leadingIcon` or `trailingIcon` property:
+
+```tsx
+import { TextField } from '@reui/reui';
+
+<IconProvider value={{ ...defaultIcons, LinkIcon }}>
+	<TextField leadingIcon="LinkIcon" label="Will render a link at the beginning of the input" />
+</IconProvider>;
+```
+
+export function Example() {
+	return (
+		<IconProvider
+			value={{
+				LinkIcon,
+			}}
+		>
+			<TextField leadingIcon="LinkIcon" label="Check out the link icon at the beginning of the input" />
+		</IconProvider>
+	);
+}
+
+<Canvas>
+	<Example />
+</Canvas>

@@ -5556,6 +5556,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@reui/textfield@workspace:packages/@reui/textfield"
   dependencies:
+    "@reui/icons": "workspace:packages/@reui/icons"
     clsx: ^1.2.1
     react-aria: ^3.19.0
     react-stately: ^3.17.0

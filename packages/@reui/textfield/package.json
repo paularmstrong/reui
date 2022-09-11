@@ -18,6 +18,7 @@
 	},
 	"homepage": "https://reui.dev/docs/components//textfield",
 	"dependencies": {
+		"@reui/icons": "workspace:packages/@reui/icons",
 		"clsx": "^1.2.1"
 	},
 	"devDependencies": {
