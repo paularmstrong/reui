@@ -1,6 +1,6 @@
 {
 	"name": "@reui/checkbox",
-	"version": "0.1.0-alpha.0",
+	"version": "0.1.0",
 	"description": "reUI CheckBox and CheckBoxGroup components",
 	"license": "MIT",
 	"main": "./dist/index.cjs",
@@ -18,7 +18,7 @@
 	},
 	"homepage": "https://reui.dev/docs/components//checkbox",
 	"dependencies": {
-		"@reui/icons": "0.1.0-alpha.0",
+		"@reui/icons": "0.1.0",
 		"clsx": "^1.2.1"
 	},
 	"devDependencies": {

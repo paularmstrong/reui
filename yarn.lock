@@ -5350,7 +5350,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@reui/activity-indicator@0.1.0-alpha.0, @reui/activity-indicator@workspace:packages/@reui/activity-indicator":
+"@reui/activity-indicator@0.1.0, @reui/activity-indicator@workspace:packages/@reui/activity-indicator":
   version: 0.0.0-use.local
   resolution: "@reui/activity-indicator@workspace:packages/@reui/activity-indicator"
   dependencies:
@@ -5365,7 +5365,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@reui/button@0.1.0-alpha.0, @reui/button@workspace:packages/@reui/button":
+"@reui/button@0.1.0, @reui/button@workspace:packages/@reui/button":
   version: 0.0.0-use.local
   resolution: "@reui/button@workspace:packages/@reui/button"
   dependencies:
@@ -5380,11 +5380,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@reui/checkbox@0.1.0-alpha.0, @reui/checkbox@workspace:packages/@reui/checkbox":
+"@reui/checkbox@0.1.0, @reui/checkbox@workspace:packages/@reui/checkbox":
   version: 0.0.0-use.local
   resolution: "@reui/checkbox@workspace:packages/@reui/checkbox"
   dependencies:
-    "@reui/icons": 0.1.0-alpha.0
+    "@reui/icons": 0.1.0
     clsx: ^1.2.1
     react-aria: ^3.19.0
     react-stately: ^3.17.0
@@ -5411,7 +5411,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@reui/icons@0.1.0-alpha.0, @reui/icons@workspace:packages/@reui/icons":
+"@reui/icons@0.1.0, @reui/icons@workspace:packages/@reui/icons":
   version: 0.0.0-use.local
   resolution: "@reui/icons@workspace:packages/@reui/icons"
   dependencies:
@@ -5425,11 +5425,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@reui/listbox@0.1.0-alpha.0, @reui/listbox@workspace:packages/@reui/listbox":
+"@reui/listbox@0.1.0, @reui/listbox@workspace:packages/@reui/listbox":
   version: 0.0.0-use.local
   resolution: "@reui/listbox@workspace:packages/@reui/listbox"
   dependencies:
-    "@reui/icons": 0.1.0-alpha.0
+    "@reui/icons": 0.1.0
     clsx: ^1.2.1
     react-aria: ^3.19.0
     react-stately: ^3.17.0
@@ -5441,7 +5441,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@reui/popover@0.1.0-alpha.0, @reui/popover@workspace:packages/@reui/popover":
+"@reui/popover@0.1.0, @reui/popover@workspace:packages/@reui/popover":
   version: 0.0.0-use.local
   resolution: "@reui/popover@workspace:packages/@reui/popover"
   dependencies:
@@ -5456,7 +5456,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@reui/radio@0.1.0-alpha.0, @reui/radio@workspace:packages/@reui/radio":
+"@reui/radio@0.1.0, @reui/radio@workspace:packages/@reui/radio":
   version: 0.0.0-use.local
   resolution: "@reui/radio@workspace:packages/@reui/radio"
   dependencies:
@@ -5475,17 +5475,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@reui/reui@workspace:packages/reui"
   dependencies:
-    "@reui/activity-indicator": 0.1.0-alpha.0
-    "@reui/button": 0.1.0-alpha.0
-    "@reui/checkbox": 0.1.0-alpha.0
-    "@reui/icons": 0.1.0-alpha.0
-    "@reui/listbox": 0.1.0-alpha.0
-    "@reui/popover": 0.1.0-alpha.0
-    "@reui/radio": 0.1.0-alpha.0
-    "@reui/selectfield": 0.1.0-alpha.0
-    "@reui/snackbar": 0.1.0-alpha.0
-    "@reui/switch": 0.1.0-alpha.0
-    "@reui/textfield": 0.1.0-alpha.0
+    "@reui/activity-indicator": 0.1.0
+    "@reui/button": 0.1.0
+    "@reui/checkbox": 0.1.0
+    "@reui/icons": 0.1.0
+    "@reui/listbox": 0.1.0
+    "@reui/popover": 0.1.0
+    "@reui/radio": 0.1.0
+    "@reui/selectfield": 0.1.0
+    "@reui/snackbar": 0.1.0
+    "@reui/switch": 0.1.0
+    "@reui/textfield": 0.1.0
     react-aria: ^3.19.0
     react-stately: ^3.17.0
   peerDependencies:
@@ -5496,13 +5496,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@reui/selectfield@0.1.0-alpha.0, @reui/selectfield@workspace:packages/@reui/selectfield":
+"@reui/selectfield@0.1.0, @reui/selectfield@workspace:packages/@reui/selectfield":
   version: 0.0.0-use.local
   resolution: "@reui/selectfield@workspace:packages/@reui/selectfield"
   dependencies:
-    "@reui/icons": 0.1.0-alpha.0
-    "@reui/listbox": 0.1.0-alpha.0
-    "@reui/popover": 0.1.0-alpha.0
+    "@reui/icons": 0.1.0
+    "@reui/listbox": 0.1.0
+    "@reui/popover": 0.1.0
     clsx: ^1.2.1
     react-aria: ^3.19.0
     react-stately: ^3.17.0
@@ -5514,7 +5514,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@reui/snackbar@0.1.0-alpha.0, @reui/snackbar@workspace:packages/@reui/snackbar":
+"@reui/snackbar@0.1.0, @reui/snackbar@workspace:packages/@reui/snackbar":
   version: 0.0.0-use.local
   resolution: "@reui/snackbar@workspace:packages/@reui/snackbar"
   dependencies:
@@ -5529,7 +5529,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@reui/switch@0.1.0-alpha.0, @reui/switch@workspace:packages/@reui/switch":
+"@reui/switch@0.1.0, @reui/switch@workspace:packages/@reui/switch":
   version: 0.0.0-use.local
   resolution: "@reui/switch@workspace:packages/@reui/switch"
   dependencies:
@@ -5552,7 +5552,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@reui/textfield@0.1.0-alpha.0, @reui/textfield@workspace:packages/@reui/textfield":
+"@reui/textfield@0.1.0, @reui/textfield@workspace:packages/@reui/textfield":
   version: 0.0.0-use.local
   resolution: "@reui/textfield@workspace:packages/@reui/textfield"
   dependencies:

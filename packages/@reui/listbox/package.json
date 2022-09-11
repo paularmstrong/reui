@@ -1,6 +1,6 @@
 {
 	"name": "@reui/listbox",
-	"version": "0.1.0-alpha.0",
+	"version": "0.1.0",
 	"description": "reUI ListBox component",
 	"license": "MIT",
 	"main": "./dist/index.cjs",
@@ -18,7 +18,7 @@
 	},
 	"homepage": "https://reui.dev/docs/components//listbox",
 	"dependencies": {
-		"@reui/icons": "0.1.0-alpha.0",
+		"@reui/icons": "0.1.0",
 		"clsx": "^1.2.1"
 	},
 	"devDependencies": {
