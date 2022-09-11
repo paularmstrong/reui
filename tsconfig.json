@@ -18,6 +18,6 @@
 		"target": "es6",
 		"typeRoots": ["node_modules/@types", "types"]
 	},
-	"include": ["packages"],
+	"include": ["packages", "docs"],
 	"exclude": ["**/node_modules", "**/dist"]
 }
