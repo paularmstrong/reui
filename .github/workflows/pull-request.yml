@@ -22,9 +22,20 @@ jobs:
             refactor
           scopes: |
             repo
-            components
-            theme
             docs
+            reui
+            activity-indicator
+            button
+            checkbox
+            icons
+            listbox
+            popover
+            radio
+            selectfield
+            snackbar
+            switch
+            tailwind-config
+            textfield
           requireScope: true
 
   run_tests:

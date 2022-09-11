@@ -1,6 +1,6 @@
 {
 	"name": "@reui/radio",
-	"version": "0.0.0",
+	"version": "0.1.0-alpha.0",
 	"description": "reUI Radio and RadioGroup components",
 	"license": "MIT",
 	"main": "./dist/index.cjs",
@@ -12,7 +12,7 @@
 		"type": "git",
 		"url": "https://github.com/paularmstrong/reui"
 	},
-	"homepage": "https://reui.dev/components/@reui/radio",
+	"homepage": "https://reui.dev/docs/components//radio",
 	"dependencies": {
 		"clsx": "^1.2.1"
 	},
