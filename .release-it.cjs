@@ -26,7 +26,6 @@ module.exports = {
 			},
 			infile: 'docs/docs/changelog.md',
 			header: '# Changelog',
-			strictSemVer: true,
 		},
 	},
 	hooks: {
