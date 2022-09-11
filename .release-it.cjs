@@ -30,6 +30,7 @@ module.exports = {
 		},
 	},
 	hooks: {
+		'after:@release-it/conventional-changelog:bump': ['yarn'],
 		'before:init': ['yarn build'],
 	},
 	npm: false,
