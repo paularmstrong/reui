@@ -1,14 +1,25 @@
 import * as React from 'react';
 import { useFocus, useTextField } from 'react-aria';
 import type { AriaTextFieldProps } from 'react-aria';
+import { useIcons } from '@reui/icons';
+import type { IconContext } from '@reui/icons';
 import clsx from 'clsx';
 
 interface TextFieldProps extends AriaTextFieldProps {
-	leadingIcon?: React.ComponentType<any>;
-	trailingIcon?: React.ComponentType<any>;
+	leadingIcon?: keyof IconContext;
+	leadingIconProps?: React.ComponentProps<'svg'>;
+	trailingIcon?: keyof IconContext;
+	trailingIconProps?: React.ComponentProps<'svg'>;
 }
 
-export function TextField({ leadingIcon: LeadingIcon, trailingIcon: TrailingIcon, ...props }: TextFieldProps) {
+export function TextField({
+	leadingIcon,
+	leadingIconProps,
+	trailingIcon,
+	trailingIconProps,
+	...props
+}: TextFieldProps) {
+	const icons = useIcons();
 	function handleChange(value: string) {
 		setHasValue(!!value);
 		props.onChange && props.onChange(value);
@@ -20,7 +31,7 @@ export function TextField({ leadingIcon: LeadingIcon, trailingIcon: TrailingIcon
 		ref
 	);
 	const [isFocused, setFocus] = React.useState(false);
-	const [hasValue, setHasValue] = React.useState(false);
+	const [hasValue, setHasValue] = React.useState(Boolean(props.defaultValue || props.value));
 	const { focusProps } = useFocus({
 		onFocus() {
 			setFocus(true);
@@ -29,6 +40,9 @@ export function TextField({ leadingIcon: LeadingIcon, trailingIcon: TrailingIcon
 			setFocus(false);
 		},
 	});
+
+	const LeadingIcon = (leadingIcon && icons[leadingIcon]) || null;
+	const TrailingIcon = (trailingIcon && icons[trailingIcon]) || null;
 
 	return (
 		<div className="w-full">
@@ -42,8 +56,11 @@ export function TextField({ leadingIcon: LeadingIcon, trailingIcon: TrailingIcon
 			>
 				<label {...labelProps} className="flex grow items-center space-x-2">
 					{LeadingIcon ? (
-						<div aria-hidden className="h-full w-4 text-gray-800 dark:text-gray-300">
-							<LeadingIcon />
+						<div
+							aria-hidden
+							className={clsx('h-full w-4 text-gray-800 dark:text-gray-300', leadingIconProps?.className)}
+						>
+							<LeadingIcon {...leadingIconProps} />
 						</div>
 					) : null}
 
@@ -71,8 +88,11 @@ export function TextField({ leadingIcon: LeadingIcon, trailingIcon: TrailingIcon
 					</div>
 
 					{TrailingIcon ? (
-						<div aria-hidden className="h-full w-4 text-gray-800 dark:text-gray-300">
-							<TrailingIcon />
+						<div
+							aria-hidden
+							className={clsx('h-full w-4 text-gray-800 dark:text-gray-300', trailingIconProps?.className)}
+						>
+							<TrailingIcon {...trailingIconProps} />
 						</div>
 					) : null}
 				</label>

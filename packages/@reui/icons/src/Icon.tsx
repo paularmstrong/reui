@@ -1,11 +1,12 @@
 import * as React from 'react';
 
-interface IconContext {
+export type IconContext = {
 	CheckIcon: React.ComponentType<React.ComponentProps<'svg'>>;
 	ChevronDownIcon: React.ComponentType<React.ComponentProps<'svg'>>;
 	ChevronUpIcon: React.ComponentType<React.ComponentProps<'svg'>>;
 	ChevronUpDownIcon: React.ComponentType<React.ComponentProps<'svg'>>;
-}
+	[key: string]: React.ComponentType<React.ComponentProps<'svg'>>;
+};
 
 function Placeholder() {
 	return <svg />;
