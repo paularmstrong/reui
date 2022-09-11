@@ -1,6 +1,6 @@
 {
 	"name": "@reui/selectfield",
-	"version": "0.0.0",
+	"version": "0.1.0-alpha.0",
 	"description": "reUI SelectField component",
 	"license": "MIT",
 	"main": "./dist/index.cjs",
@@ -14,9 +14,9 @@
 	},
 	"homepage": "https://reui.dev/components/@reui/selectfield",
 	"dependencies": {
-		"@reui/icons": "workspace:packages/@reui/icons",
-		"@reui/listbox": "workspace:packages/@reui/listbox",
-		"@reui/popover": "workspace:packages/@reui/popover",
+		"@reui/icons": "0.1.0-alpha.0",
+		"@reui/listbox": "0.1.0-alpha.0",
+		"@reui/popover": "0.1.0-alpha.0",
 		"clsx": "^1.2.1"
 	},
 	"devDependencies": {

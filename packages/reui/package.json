@@ -1,6 +1,6 @@
 {
 	"name": "@reui/reui",
-	"version": "0.0.0",
+	"version": "0.1.0-alpha.0",
 	"description": "reUI",
 	"license": "MIT",
 	"main": "./dist/index.cjs",
@@ -14,17 +14,17 @@
 	},
 	"homepage": "https://reui.dev",
 	"dependencies": {
-		"@reui/activity-indicator": "workspace:packages/@reui/activity-indicator",
-		"@reui/button": "workspace:packages/@reui/button",
-		"@reui/checkbox": "workspace:packages/@reui/checkbox",
-		"@reui/icons": "workspace:packages/@reui/icons",
-		"@reui/listbox": "workspace:packages/@reui/listbox",
-		"@reui/popover": "workspace:packages/@reui/popover",
-		"@reui/radio": "workspace:packages/@reui/radio",
-		"@reui/selectfield": "workspace:packages/@reui/selectfield",
-		"@reui/snackbar": "workspace:packages/@reui/snackbar",
-		"@reui/switch": "workspace:packages/@reui/switch",
-		"@reui/textfield": "workspace:packages/@reui/textfield"
+		"@reui/activity-indicator": "0.1.0-alpha.0",
+		"@reui/button": "0.1.0-alpha.0",
+		"@reui/checkbox": "0.1.0-alpha.0",
+		"@reui/icons": "0.1.0-alpha.0",
+		"@reui/listbox": "0.1.0-alpha.0",
+		"@reui/popover": "0.1.0-alpha.0",
+		"@reui/radio": "0.1.0-alpha.0",
+		"@reui/selectfield": "0.1.0-alpha.0",
+		"@reui/snackbar": "0.1.0-alpha.0",
+		"@reui/switch": "0.1.0-alpha.0",
+		"@reui/textfield": "0.1.0-alpha.0"
 	},
 	"devDependencies": {
 		"react-aria": "^3.19.0",
