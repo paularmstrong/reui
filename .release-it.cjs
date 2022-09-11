@@ -11,7 +11,19 @@ module.exports = {
 			workspaces: ['packages/@reui/*', 'packages/reui'],
 		},
 		'@release-it/conventional-changelog': {
-			preset: 'conventionalcommits',
+			preset: {
+				name: 'conventionalcommits',
+				types: [
+					{ type: 'fix', section: '🐞 Bug Fixes' },
+					{ type: 'feat', section: '🌟 Features' },
+					{ type: 'infra', section: '🏗 Internal improvements', hidden: true },
+					{ type: 'perf', section: '⚡️ Performance enhanchements' },
+					{ type: 'chore', section: '🧼 Chores', hidden: true },
+					{ type: 'test', section: '✅ Test coverage', hidden: true },
+					{ type: 'docs', section: '📚 Documentation' },
+					{ type: 'refactor', section: '♻️ Refactors' },
+				],
+			},
 			infile: 'docs/docs/changelog.md',
 			header: '# Changelog',
 			strictSemVer: true,
