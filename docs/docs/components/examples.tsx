@@ -4,23 +4,23 @@ import { Button, SnackBar, useSnacks, Item, SelectField } from '@reui/reui';
 export function SelectFieldExample(props: React.ComponentProps<typeof SelectField>) {
 	return (
 		<SelectField label="Favorite Animal" {...props}>
-			<Item>Red Panda</Item>
-			<Item>Cat</Item>
-			<Item>Dog</Item>
-			<Item>Aardvark</Item>
-			<Item>Kangaroo</Item>
-			<Item>Snake</Item>
-			<Item>Ape</Item>
-			<Item>Chimpanzee</Item>
-			<Item>Penguin</Item>
-			<Item>Lynx</Item>
-			<Item>Impala</Item>
-			<Item>Gorilla</Item>
-			<Item>Scorpion</Item>
-			<Item>Tarantula</Item>
-			<Item>Shark</Item>
-			<Item>Sea cow</Item>
-			<Item>Narwhal</Item>
+			<Item key="red panda">Red Panda</Item>
+			<Item key="cat">Cat</Item>
+			<Item key="dog">Dog</Item>
+			<Item key="aardvark">Aardvark</Item>
+			<Item key="kangaroo">Kangaroo</Item>
+			<Item key="snake">Snake</Item>
+			<Item key="ape">Ape</Item>
+			<Item key="chimpanzee">Chimpanzee</Item>
+			<Item key="penguin">Penguin</Item>
+			<Item key="lynx">Lynx</Item>
+			<Item key="impala">Impala</Item>
+			<Item key="gorilla">Gorilla</Item>
+			<Item key="scorpion">Scorpion</Item>
+			<Item key="tarantula">Tarantula</Item>
+			<Item key="shark">Shark</Item>
+			<Item key="sea cow">Sea cow</Item>
+			<Item key="narwhal">Narwhal</Item>
 		</SelectField>
 	);
 }
