@@ -7,6 +7,10 @@
 	"packageManager": "yarn@3.2.3",
 	"main": "./dist/index.cjs",
 	"source": "./src/index.cjs",
+	"files": [
+		"dist",
+		"src"
+	],
 	"sideEffects": false,
 	"repository": {
 		"type": "git",
