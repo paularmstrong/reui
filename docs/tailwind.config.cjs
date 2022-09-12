@@ -1,14 +1,12 @@
 'use strict';
 const path = require('path');
-const baseConfig = require('@reui/tailwind-config');
 
 module.exports = {
-	...baseConfig,
+	presets: [require('@reui/tailwind-config')],
 	darkMode: 'class',
 	content: [
 		'./src/**/*.tsx',
 		'./docs/**/*.{mdx,md}',
-		`${path.join(__dirname, '..', 'packages')}/**/*.{ts,tsx,mdx,md}`,
-		...(baseConfig.content || []),
+		`${path.join(path.dirname(require.resolve('@reui/reui')), '..', '..')}/**/*.{js,cjs}`,
 	],
 };

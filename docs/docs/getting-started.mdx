@@ -5,7 +5,56 @@ sidebar_position: 1
 # Getting started
 
 ```bash npm2yarn
-npm install --save reui @reui/tailwind-config
+npm install --save @reui/reui @reui/tailwind-config
+```
+
+## Tailwindcss config
+
+The `@reui/tailwind-config` package includes a preset and content string generator to ensure that all of reUI’s CSS classnames are added into your built CSS. Ensure at a minimum you include the `preset` and `content` declarations in your Tailwind configuration:
+
+```js title="tailwind.config.cjs"
+const path = require('path');
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+	presets: [require('@reui/tailwind-config')],
+	content: [
+		// This may differ for your project
+		'./src/**/*.{ts,tsx,js,jsx,html}',
+		// Include the reUI code so that Tailwind includes all of the correct classNames
+		`${path.join(path.dirname(require.resolve('@reui/reui')), '..', '..')}/**/*.{js,cjs}`,
+	],
+};
+```
+
+A [`primary` color](theme) is provided by the configuration for you as well as some of the base Tailwindcss colors, including but not limited to `gray`, `red`, `white`, `black`, and `translucent`. It may not be suitable for your application, so if you would like to override this color, at a minimum, you must provide colors and color scales for the following:
+
+```js title="tailwind.config.cjs"
+const { preset, content } = require('@reui/tailwind-config');
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+	presets: [preset],
+	extend: {
+		theme: {
+			colors: {
+				// Color scales: 50, 100-900
+				primary: {
+					50: '#f6f9f8',
+					100: '#e3f1f7',
+					200: '#c1e2ec',
+					300: '#8ec3d3',
+					400: '#539eb2',
+					500: '#3d7d91',
+					600: '#326374',
+					700: '#294a58',
+					800: '#1d323e',
+					900: '#111e29',
+				},
+			},
+		},
+	},
+};
 ```
 
 ## IconProvider

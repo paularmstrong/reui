@@ -40,7 +40,7 @@ module.exports = {
 
 			settings: {
 				tailwindcss: {
-					config: require.resolve('@reui/tailwind-config'),
+					config: require('docs/tailwind.config.cjs'),
 				},
 			},
 
