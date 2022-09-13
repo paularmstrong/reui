@@ -33,7 +33,7 @@ jobs:
         run: yarn build
 
       - name: Typecheck
-        run: yarn tsc
+        run: yarn tsc:check
 
       - name: Tests
         run: yarn test
