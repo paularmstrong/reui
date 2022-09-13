@@ -1,23 +1,26 @@
 {
+	"extends": "./tsconfig.base.json",
 	"compilerOptions": {
-		"allowSyntheticDefaultImports": true,
+		"composite": true,
 		"declaration": true,
-		"downlevelIteration": true,
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"isolatedModules": true,
-		"jsx": "react",
-		"lib": ["dom", "dom.iterable", "esnext"],
-		"module": "esnext",
-		"moduleResolution": "node",
-		"noEmit": true,
-		"noImplicitAny": true,
-		"noImplicitThis": true,
-		"skipLibCheck": true,
-		"strict": true,
-		"target": "es6",
-		"typeRoots": ["node_modules/@types", "types"]
+		"declarationMap": false,
+		"emitDeclarationOnly": true,
+		"incremental": true,
+		"noEmit": false
 	},
-	"include": ["packages", "docs"],
-	"exclude": ["**/node_modules", "**/dist"]
+	"exclude": ["**/dist", "**/*.test.ts", "**/*.test.tsx"],
+	"references": [
+		{ "path": "./packages/@reui/activity-indicator" },
+		{ "path": "./packages/@reui/button" },
+		{ "path": "./packages/@reui/checkbox" },
+		{ "path": "./packages/@reui/icons" },
+		{ "path": "./packages/@reui/listbox" },
+		{ "path": "./packages/@reui/popover" },
+		{ "path": "./packages/@reui/radio" },
+		{ "path": "./packages/@reui/reui" },
+		{ "path": "./packages/@reui/selectfield" },
+		{ "path": "./packages/@reui/snackbar" },
+		{ "path": "./packages/@reui/switch" },
+		{ "path": "./packages/@reui/textfield" }
+	]
 }

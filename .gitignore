@@ -12,3 +12,8 @@ node_modules
 
 .eslintcache
 .parcel-cache
+
+/index.d.ts
+packages/@reui/*/index.d.ts
+*.tsbuildinfo
+*.d.ts.map

@@ -8,7 +8,7 @@ module.exports = {
 	plugins: {
 		'@release-it-plugins/workspaces': {
 			skipChecks: true,
-			workspaces: ['packages/@reui/*', 'packages/reui'],
+			workspaces: ['packages/@reui/*'],
 		},
 		'@release-it/conventional-changelog': {
 			preset: {
