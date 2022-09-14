@@ -8,7 +8,7 @@
 		"incremental": true,
 		"noEmit": false
 	},
-	"exclude": ["**/dist", "**/*.test.ts", "**/*.test.tsx"],
+	"exclude": ["**/dist", "**/*.test.ts", "**/*.test.tsx", "./scripts/yarn"],
 	"references": [
 		{ "path": "./packages/@reui/activity-indicator" },
 		{ "path": "./packages/@reui/button" },
