@@ -8,8 +8,6 @@ module.exports = {
 		const { mkdir, readFile, writeFile } = require('fs/promises');
 		const { existsSync } = require('fs');
 		const path = require('path');
-		const glob = oRequire('glob');
-		const handlebars = oRequire('handlebars');
 
 		class CreateWorkspaceCommand extends BaseCommand {
 			static paths = [['create-package']];
@@ -23,6 +21,9 @@ module.exports = {
 			name = Option.String({ required: true });
 
 			async execute() {
+				const glob = oRequire('glob');
+				const handlebars = oRequire('handlebars');
+
 				const basePath = path.join(__dirname, 'templates', 'package');
 				const shortname = this.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 				const name = `@reui/${shortname}`;
