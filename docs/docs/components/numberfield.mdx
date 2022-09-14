@@ -1,0 +1,21 @@
+# NumberField
+
+import { Canvas } from '@site/src/components';
+import { NumberField } from '@reui/reui';
+
+<Canvas>
+	<div className="flex flex-col gap-4">
+		<NumberField label="This is a number field" />
+		<NumberField label="This is required" isRequired />
+		<NumberField label="This has a default value" defaultValue={42} />
+		<NumberField label="This is has a placeholder" placeholder="I am a placeholder" />
+		<NumberField label="This is a number field" description="With a helper/description because forms are confusing." />
+		<NumberField
+			leadingIcon="ChevronUpIcon"
+			trailingIcon="ChevronDownIcon"
+			trailingIconProps={{ className: 'text-red-600' }}
+			label="This is a number field"
+			errorMessage="This field has an error that needs fixing."
+		/>
+	</div>
+</Canvas>

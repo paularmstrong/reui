@@ -4582,6 +4582,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@reui/numberfield@workspace:packages/@reui/numberfield":
+  version: 0.0.0-use.local
+  resolution: "@reui/numberfield@workspace:packages/@reui/numberfield"
+  dependencies:
+    "@reui/button": 0.1.0
+    clsx: ^1.2.1
+    react-aria: ^3.19.0
+    react-stately: ^3.17.0
+  peerDependencies:
+    react: ^18
+    react-aria: ^3
+    react-stately: ^3
+    tailwindcss: ^3
+  languageName: unknown
+  linkType: soft
+
 "@reui/popover@0.1.0, @reui/popover@workspace:packages/@reui/popover":
   version: 0.0.0-use.local
   resolution: "@reui/popover@workspace:packages/@reui/popover"
@@ -4621,6 +4637,7 @@ __metadata:
     "@reui/checkbox": 0.1.0
     "@reui/icons": 0.1.0
     "@reui/listbox": 0.1.0
+    "@reui/numberfield": "workspace:packages/@reui/numberfield"
     "@reui/popover": 0.1.0
     "@reui/radio": 0.1.0
     "@reui/selectfield": 0.1.0
