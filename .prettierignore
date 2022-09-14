@@ -9,3 +9,5 @@ dist
 packages/@reui/*/index.d.ts
 *.tsbuildinfo
 *.d.ts.map
+
+scripts/yarn/templates/*
