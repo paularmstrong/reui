@@ -1,5 +1,4 @@
-const glob = require('glob');
-const handlebars = require('handlebars');
+const oRequire = require;
 
 module.exports = {
 	name: 'reUI',
@@ -9,6 +8,8 @@ module.exports = {
 		const { mkdir, readFile, writeFile } = require('fs/promises');
 		const { existsSync } = require('fs');
 		const path = require('path');
+		const glob = oRequire('glob');
+		const handlebars = oRequire('handlebars');
 
 		class CreateWorkspaceCommand extends BaseCommand {
 			static paths = [['create-package']];
