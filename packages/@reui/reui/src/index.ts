@@ -3,6 +3,7 @@ export { Button } from '@reui/button';
 export { CheckBox, CheckBoxGroup } from '@reui/checkbox';
 export { IconProvider, useIcons } from '@reui/icons';
 export { ListBox } from '@reui/listbox';
+export { NumberField } from '@reui/numberfield';
 export { Popover } from '@reui/popover';
 export { Radio, RadioGroup } from '@reui/radio';
 export { Item, SelectField } from '@reui/selectfield';

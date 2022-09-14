@@ -6,6 +6,7 @@ import clsx from 'clsx';
 type Color = 'primary' | 'red' | 'green' | 'gray';
 
 interface SharedButtonProps extends AriaButtonProps {
+	className?: string;
 	color?: Color;
 	buttonStyle?: 'primary' | 'secondary' | 'plain';
 }
@@ -22,6 +23,7 @@ export function Button({ buttonStyle = 'primary', ...props }: SharedButtonProps)
 }
 
 interface ButtonProps extends AriaButtonProps {
+	className?: string;
 	color?: Color;
 }
 
@@ -46,7 +48,8 @@ function PrimaryButton({ color = 'primary', ...props }: ButtonProps) {
 							'bg-green-500 focus:bg-green-400 focus:ring-green-500/50 active:bg-green-600': color === 'green',
 							'bg-gray-500 focus:bg-gray-400 focus:ring-primary-500/50 active:bg-gray-600 dark:ring-primary-400/50':
 								color === 'gray',
-					  } // eslint-disable-line no-mixed-spaces-and-tabs
+					  }, // eslint-disable-line no-mixed-spaces-and-tabs
+				props.className
 			)}
 		>
 			{props.children}
@@ -77,7 +80,8 @@ function PlainButton({ color = 'primary', ...props }: ButtonProps) {
 								color === 'green',
 							'text-gray-500 hover:bg-gray-500/10 focus:ring-primary-500/50 active:bg-gray-500/10 dark:ring-primary-400/50':
 								color === 'gray',
-					  } // eslint-disable-line no-mixed-spaces-and-tabs
+					  }, // eslint-disable-line no-mixed-spaces-and-tabs
+				props.className
 			)}
 		>
 			{props.children}
@@ -108,7 +112,8 @@ function SecondaryButton({ color = 'primary', ...props }: ButtonProps) {
 								color === 'green',
 							'border-2 border-gray-500 text-gray-500 hover:bg-gray-500/10 focus:ring-primary-500/50 active:bg-gray-500/10 dark:ring-primary-400/50':
 								color === 'gray',
-					  } // eslint-disable-line no-mixed-spaces-and-tabs
+					  }, // eslint-disable-line no-mixed-spaces-and-tabs
+				props.className
 			)}
 		>
 			{props.children}

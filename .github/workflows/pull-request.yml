@@ -29,6 +29,7 @@ jobs:
             checkbox
             icons
             listbox
+            numberfield
             popover
             radio
             selectfield
