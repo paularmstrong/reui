@@ -46,20 +46,23 @@ export function SelectField<T extends Record<string, unknown>>(props: AriaSelect
 				<button {...mergeProps(buttonProps, focusProps)} className="absolute inset-0 outline-none" ref={triggerRef}>
 					<HiddenSelect state={state} triggerRef={triggerRef} label={props.label} name={props.name} />
 				</button>
-				<div className="pointer-events-none flex grow flex-row items-center space-x-2 py-2 px-4">
-					<div className="relative flex grow items-center justify-items-stretch">
-						<span {...valueProps} className="pointer-events-none mt-4 h-8 grow bg-transparent">
+				<div className="pointer-events-none flex grow flex-row items-center space-x-2 overflow-hidden py-2 px-4">
+					<div className="relative flex grow items-center justify-items-stretch overflow-hidden">
+						<span
+							{...valueProps}
+							className="pointer-events-none mt-4 h-8 grow overflow-hidden text-ellipsis whitespace-nowrap bg-transparent"
+						>
 							{state.selectedItem?.rendered || ''}
 						</span>
 						<div
 							{...labelProps}
 							className={clsx(
-								'absolute top-3 inline-flex transform gap-1 rounded bg-white transition-[font-size,color,transform] duration-100 ease-in-out dark:bg-gray-800',
+								'absolute top-3 inline-flex w-full transform gap-1 overflow-hidden text-ellipsis rounded bg-white transition-[font-size,color,transform] duration-100 ease-in-out dark:bg-gray-800',
 								Boolean(state.selectedItem) &&
 									'-translate-y-2 text-xs font-medium text-primary-700 dark:text-primary-300'
 							)}
 						>
-							{props.label}
+							<span className="overflow-hidden text-ellipsis whitespace-nowrap">{props.label}</span>
 							{props.isRequired ? (
 								<span aria-hidden className="text-red-600 dark:text-red-400">
 									*
@@ -68,7 +71,7 @@ export function SelectField<T extends Record<string, unknown>>(props: AriaSelect
 						</div>
 					</div>
 
-					<span className="w-4 text-base text-gray-800 dark:text-gray-300">
+					<span className="relative z-10 w-4 text-base text-gray-800 dark:text-gray-300">
 						{state.isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
 					</span>
 				</div>

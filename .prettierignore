@@ -4,6 +4,7 @@ node_modules/*
 .docusaurus
 docs/src/components/Canvas/styles.css
 dist
+.next
 
 /index.d.ts
 packages/@reui/*/index.d.ts

@@ -45,28 +45,28 @@ export function NumberField(props: AriaNumberFieldProps) {
 					props.errorMessage ? 'border-red-600 dark:border-red-400' : 'border-gray-200 dark:border-gray-600'
 				)}
 			>
-				<label {...labelProps} className="flex grow items-center space-x-2">
-					<div {...groupProps} className="relative z-0 flex grow items-center justify-items-stretch">
+				<label {...labelProps} className="flex grow items-center space-x-2 overflow-hidden">
+					<div {...groupProps} className="relative z-0 flex grow items-center justify-items-stretch overflow-hidden">
 						<input
 							{...mergeProps(inputProps, focusProps)}
 							ref={ref}
-							className="mt-4 h-8 grow bg-transparent font-normal focus:outline-none focus:ring-0"
+							className="mt-4 h-8 min-w-0 flex-shrink grow bg-transparent font-normal focus:outline-none focus:ring-0"
 						/>
 
 						<div
 							className={clsx(
-								'absolute top-3 inline-flex transform gap-1 rounded bg-white transition-[font-size,color,transform] duration-100 ease-in-out dark:bg-gray-800',
+								'absolute top-3 inline-flex w-full transform gap-1 overflow-hidden text-ellipsis rounded bg-white pr-6 transition-[font-size,color,transform] duration-100 ease-in-out dark:bg-gray-800',
 								(isFocused || hasValue) && '-translate-y-2 text-xs font-medium text-primary-700 dark:text-primary-300'
 							)}
 						>
-							{props.label}
+							<span className="overflow-hidden text-ellipsis whitespace-nowrap">{props.label}</span>
 							{props.isRequired ? (
 								<span aria-hidden className="text-red-600 dark:text-red-400">
 									*
 								</span>
 							) : null}
 						</div>
-						<div className="flex flex-col-reverse">
+						<div className="relative z-10 flex flex-col-reverse">
 							<Button {...decrementButtonProps} buttonStyle="plain" className="px-2 py-1">
 								<div className="h-full w-4 text-gray-800 dark:text-gray-300">
 									<ChevronDownIcon />

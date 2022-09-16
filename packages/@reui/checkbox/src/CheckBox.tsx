@@ -77,7 +77,7 @@ export function CheckBox(props: CheckboxProps | CheckboxGroupProps) {
 
 				<div
 					className={clsx(
-						'flex h-4 w-4 rounded-sm border-2 text-white transition-colors duration-150 dark:text-gray-800',
+						'flex h-4 w-4 shrink-0 rounded-sm border-2 text-white transition-colors duration-150 dark:text-gray-800',
 						isFocusVisible && 'ring-4 ring-primary-500/50 dark:ring-primary-400/50',
 						isDisabled && 'border-gray-200 bg-gray-100 dark:border-gray-700 dark:bg-gray-600',
 						isSelected

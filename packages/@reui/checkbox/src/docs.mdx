@@ -1,0 +1,32 @@
+---
+title: CheckBox, CheckBoxGroup
+description: Single and grouped form checkboxes
+---
+
+<CheckBox>This gets checked</CheckBox>
+
+---
+
+# CheckBox
+
+<div className="flex flex-col gap-4">
+	<CheckBox value="burritos">Burritos</CheckBox>
+	<CheckBox
+		value="tacos"
+		isRequired
+		errorMessage="This field is required"
+		description="Sometimes a checkbox needs a little more context."
+	>
+		Tacos
+	</CheckBox>
+</div>
+
+## CheckboxGroup
+
+<CheckBoxGroup label="Pick a food">
+	<CheckBox value="burritos">Burritos</CheckBox>
+	<CheckBox value="tacos">Tacos</CheckBox>
+	<CheckBox isDisabled value="chocotaco">
+		ChocoTaco
+	</CheckBox>
+</CheckBoxGroup>
