@@ -1,7 +1,7 @@
 {
-	"name": "@reui/reui",
-	"version": "0.1.0",
-	"description": "reUI",
+	"name": "@reui/menu",
+	"version": "0.0.0",
+	"description": "reUI SnackBar and Snack components",
 	"license": "MIT",
 	"main": "./dist/index.cjs",
 	"module": "./dist/index.js",
@@ -15,21 +15,9 @@
 		"type": "git",
 		"url": "https://github.com/paularmstrong/reui"
 	},
-	"homepage": "https://reui.dev",
+	"homepage": "https://reui.dev/docs/components/menu",
 	"dependencies": {
-		"@reui/activity-indicator": "0.1.0",
-		"@reui/button": "0.1.0",
-		"@reui/checkbox": "0.1.0",
-		"@reui/icons": "0.1.0",
-		"@reui/listbox": "0.1.0",
-		"@reui/menu": "workspace:packages/@reui/menu",
-		"@reui/numberfield": "workspace:packages/@reui/numberfield",
-		"@reui/popover": "0.1.0",
-		"@reui/radio": "0.1.0",
-		"@reui/selectfield": "0.1.0",
-		"@reui/snackbar": "0.1.0",
-		"@reui/switch": "0.1.0",
-		"@reui/textfield": "0.1.0"
+		"clsx": "^1.2.1"
 	},
 	"devDependencies": {
 		"react-aria": "^3.19.0",

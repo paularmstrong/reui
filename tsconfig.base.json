@@ -17,7 +17,6 @@
 		"noEmit": false,
 		"noImplicitAny": true,
 		"noImplicitThis": true,
-		"outDir": "./dist/",
 		"skipLibCheck": true,
 		"strict": true,
 		"target": "es6",

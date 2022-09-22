@@ -2886,6 +2886,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@reui/menu@workspace:packages/@reui/menu":
+  version: 0.0.0-use.local
+  resolution: "@reui/menu@workspace:packages/@reui/menu"
+  dependencies:
+    clsx: ^1.2.1
+    react-aria: ^3.19.0
+    react-stately: ^3.17.0
+  peerDependencies:
+    react: ^18
+    react-aria: ^3
+    react-stately: ^3
+    tailwindcss: ^3
+  languageName: unknown
+  linkType: soft
+
 "@reui/numberfield@workspace:packages/@reui/numberfield":
   version: 0.0.0-use.local
   resolution: "@reui/numberfield@workspace:packages/@reui/numberfield"
@@ -2941,6 +2956,7 @@ __metadata:
     "@reui/checkbox": 0.1.0
     "@reui/icons": 0.1.0
     "@reui/listbox": 0.1.0
+    "@reui/menu": "workspace:packages/@reui/menu"
     "@reui/numberfield": "workspace:packages/@reui/numberfield"
     "@reui/popover": 0.1.0
     "@reui/radio": 0.1.0
@@ -5661,6 +5677,7 @@ __metadata:
     clsx: ^1.2.1
     glob: ^8.0.3
     gray-matter: ^4.0.3
+    idb-keyval: ^6.2.0
     next: ^12.3.0
     next-mdx-remote: ^4.1.0
     next-transpile-modules: ^9.0.0
@@ -7667,6 +7684,15 @@ __metadata:
   dependencies:
     safer-buffer: ">= 2.1.2 < 3.0.0"
   checksum: 3f60d47a5c8fc3313317edfd29a00a692cc87a19cac0159e2ce711d0ebc9019064108323b5e493625e25594f11c6236647d8e256fbe7a58f4a3b33b89e6d30bf
+  languageName: node
+  linkType: hard
+
+"idb-keyval@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "idb-keyval@npm:6.2.0"
+  dependencies:
+    safari-14-idb-fix: ^3.0.0
+  checksum: ddd58f95829ff734e3e83b29608709cdfba38e5795b1f6261ff1afc582ce48f475d0c827d7cf32aacbc5ea6b13d00c2d4a2f7240afccd5252565abeafbd7b990
   languageName: node
   linkType: hard
 
@@ -12431,6 +12457,13 @@ __metadata:
   dependencies:
     mri: ^1.1.0
   checksum: 0756e5b04c51ccdc8221ebffd1548d0ce5a783a44a0fa9017a026659b97d632913e78f7dca59f2496aa996a0be0b0c322afd87ca72ccd909406f49dbffa0f45d
+  languageName: node
+  linkType: hard
+
+"safari-14-idb-fix@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "safari-14-idb-fix@npm:3.0.0"
+  checksum: 30d5baf3d9a17b52842b2c3fd3f0001fde7095a36191b6140ac78c19e8e1ff4b2607b9beb3b066c6bec107ccb5399c96e29748a6f5fcd592425f806f5e36f759
   languageName: node
   linkType: hard
 

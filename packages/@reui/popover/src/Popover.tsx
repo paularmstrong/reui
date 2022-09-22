@@ -1,14 +1,19 @@
 import * as React from 'react';
+import clsx from 'clsx';
 import { useOverlay, DismissButton, FocusScope } from 'react-aria';
 
 interface PopoverProps {
 	position?: React.CSSProperties;
 	children: React.ReactNode;
+	className?: string;
 	isOpen?: boolean;
 	onClose: () => void;
 }
 
-export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(function Popover({ position, ...props }, ref) {
+export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(function Popover(
+	{ className, position, ...props },
+	ref
+) {
 	const { isOpen, onClose, children } = props;
 
 	const { overlayProps } = useOverlay(
@@ -30,7 +35,10 @@ export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(function P
 				{...overlayProps}
 				style={style}
 				ref={ref}
-				className="absolute z-10 mt-2 w-full overflow-auto rounded-md border border-gray-100 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-800"
+				className={clsx(
+					'absolute z-10 mt-2 w-full overflow-auto rounded-md border border-slate-100 bg-slate-50 shadow-lg dark:border-slate-600 dark:bg-slate-700 dark:shadow-slate-900',
+					className
+				)}
 			>
 				{children}
 				<DismissButton onDismiss={onClose} />

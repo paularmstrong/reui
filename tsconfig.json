@@ -1,20 +1,14 @@
 {
 	"extends": "./tsconfig.base.json",
-	"compilerOptions": {
-		"composite": true,
-		"declaration": true,
-		"declarationMap": false,
-		"emitDeclarationOnly": true,
-		"incremental": true,
-		"noEmit": false
-	},
-	"exclude": ["**/dist", "**/*.test.ts", "**/*.test.tsx", "./scripts/yarn"],
+	"exclude": ["**/dist", "**/*.test.ts", "**/*.test.tsx", "./scripts/yarn", "./docs"],
 	"references": [
 		{ "path": "./packages/@reui/activity-indicator" },
 		{ "path": "./packages/@reui/button" },
 		{ "path": "./packages/@reui/checkbox" },
 		{ "path": "./packages/@reui/icons" },
 		{ "path": "./packages/@reui/listbox" },
+		{ "path": "./packages/@reui/menu" },
+		{ "path": "./packages/@reui/numberfield" },
 		{ "path": "./packages/@reui/popover" },
 		{ "path": "./packages/@reui/radio" },
 		{ "path": "./packages/@reui/reui" },

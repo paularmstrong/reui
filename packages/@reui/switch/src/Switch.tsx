@@ -28,7 +28,7 @@ export function Switch({ labelPosition = 'after', ...props }: SwitchProps) {
 				<div
 					className={clsx(
 						'absolute top-1 h-3 w-full rounded-full shadow-inner transition-colors duration-150',
-						!state.isSelected ? 'bg-gray-300 dark:bg-gray-500' : 'bg-primary-300 dark:bg-primary-700'
+						!state.isSelected ? 'bg-slate-300 dark:bg-slate-500' : 'bg-primary-300 dark:bg-primary-700'
 					)}
 				/>
 				<div
@@ -37,7 +37,7 @@ export function Switch({ labelPosition = 'after', ...props }: SwitchProps) {
 						isFocusVisible && 'ring-4 ring-primary-500/50 dark:ring-primary-400/50',
 						state.isSelected
 							? 'translate-x-full border-primary-600 bg-primary-600 dark:border-primary-400 dark:bg-primary-400'
-							: '-translate-x-2 border-gray-100 bg-white dark:border-gray-100'
+							: '-translate-x-2 border-slate-100 bg-white dark:border-slate-100'
 					)}
 				/>
 			</div>

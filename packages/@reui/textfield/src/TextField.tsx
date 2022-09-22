@@ -48,17 +48,17 @@ export function TextField({
 		<div className="w-full">
 			<div
 				className={clsx(
-					'flex h-14 items-center rounded border-2 bg-white py-2 px-4 dark:bg-gray-800',
+					'flex h-14 items-center rounded border bg-white py-2 px-4 dark:bg-slate-900',
 					isFocused && 'ring-4 ring-primary-500/50 dark:ring-primary-400/50',
 					props.isDisabled && 'cursor-not-allowed opacity-70',
-					props.errorMessage ? 'border-red-600 dark:border-red-400' : 'border-gray-200 dark:border-gray-600'
+					props.errorMessage ? 'border-red-600 dark:border-red-400' : 'border-slate-200 dark:border-slate-600'
 				)}
 			>
 				<label {...labelProps} className="flex grow items-center space-x-2 overflow-hidden">
 					{LeadingIcon ? (
 						<div
 							aria-hidden
-							className={clsx('h-full w-4 text-gray-800 dark:text-gray-300', leadingIconProps?.className)}
+							className={clsx('h-full w-4 text-slate-800 dark:text-slate-300', leadingIconProps?.className)}
 						>
 							<LeadingIcon {...leadingIconProps} />
 						</div>
@@ -73,7 +73,7 @@ export function TextField({
 
 						<div
 							className={clsx(
-								'absolute top-3 inline-flex w-full transform gap-1 overflow-hidden text-ellipsis rounded bg-white transition-[font-size,color,transform] duration-100 ease-in-out dark:bg-gray-800',
+								'absolute top-3 inline-flex w-full transform gap-1 overflow-hidden text-ellipsis rounded bg-white transition-[font-size,color,transform] duration-100 ease-in-out dark:bg-slate-900',
 								(isFocused || hasValue) && '-translate-y-2 text-xs font-medium text-primary-700 dark:text-primary-300'
 							)}
 						>
@@ -89,7 +89,7 @@ export function TextField({
 					{TrailingIcon ? (
 						<div
 							aria-hidden
-							className={clsx('h-full w-4 text-gray-800 dark:text-gray-300', trailingIconProps?.className)}
+							className={clsx('h-full w-4 text-slate-800 dark:text-slate-300', trailingIconProps?.className)}
 						>
 							<TrailingIcon {...trailingIconProps} />
 						</div>

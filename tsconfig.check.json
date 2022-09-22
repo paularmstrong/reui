@@ -1,5 +1,8 @@
 {
 	"extends": "./tsconfig.base.json",
-	"include": ["packages", "docs"],
-	"exclude": ["**/node_modules", "**/dist"]
+	"compilerOptions": {
+		"emitDeclarationOnly": false,
+		"noEmit": true
+	},
+	"exclude": ["**/dist", "./scripts/yarn", "./docs"]
 }

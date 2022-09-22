@@ -46,7 +46,7 @@ function ListBoxSection({ section, state }: SectionProps) {
 	return (
 		<li {...itemProps} className="pt-2">
 			{section.rendered && (
-				<span {...headingProps} className="mx-3 text-xs font-bold uppercase text-gray-500">
+				<span {...headingProps} className="mx-3 text-xs font-bold uppercase text-slate-500">
 					{section.rendered}
 				</span>
 			)}
@@ -76,11 +76,11 @@ function Option({ item, state }: OptionProps) {
 			{...optionProps}
 			ref={ref}
 			className={clsx(
-				'flex cursor-default items-center justify-between rounded-md p-2 text-sm text-gray-800 outline-none dark:text-gray-300',
-				isFocused && 'bg-primary-500/10 dark:bg-primary-500/40',
+				'flex cursor-default items-center justify-between rounded-md p-2 text-sm text-slate-800 outline-none dark:text-slate-100',
+				isFocused && 'bg-primary-500/10 dark:bg-primary-600/40',
 				isSelected && 'font-bold',
 				{
-					'text-gray-700 dark:text-gray-300': isDisabled,
+					'text-slate-700 dark:text-slate-300': isDisabled,
 					'text-primary-600 dark:text-primary-400': isFocused || isSelected,
 				}
 			)}

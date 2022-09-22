@@ -6,7 +6,7 @@ interface SnackProps {
 
 export function Snack(props: SnackProps) {
 	return (
-		<aside className="pointer-events-auto rounded-md bg-gray-900/80 px-6 py-2 text-white shadow-xl backdrop-blur">
+		<aside className="pointer-events-auto rounded-md bg-slate-900/80 px-6 py-2 text-slate-100 shadow-xl backdrop-blur dark:bg-slate-100/80 dark:text-slate-900">
 			<div role="status" aria-relevant="additions">
 				<div aria-atomic="false">{props.children}</div>
 			</div>

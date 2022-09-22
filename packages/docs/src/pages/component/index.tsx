@@ -14,7 +14,7 @@ export default function Components(props: Props) {
 		<div className="p-4">
 			<h1>Components</h1>
 			<nav>
-				<ul className="grid auto-cols-fr grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4">
+				<ul className="grid auto-cols-fr grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-4">
 					{(props.components || []).map(({ route, example, frontmatter }) => {
 						const { description, title = route } = frontmatter.data;
 						return (
@@ -22,7 +22,7 @@ export default function Components(props: Props) {
 								<Link href={`/component/${route}`}>
 									<a className="group h-full">
 										<div className="flex h-full flex-col gap-2">
-											<div className="pointer-events-none flex h-full items-center justify-center justify-self-stretch rounded border border-gray-200 bg-gray-100 p-4 group-hover:shadow ">
+											<div className="pointer-events-none flex h-full items-center justify-center justify-self-stretch overflow-hidden rounded border border-slate-200 bg-slate-100 p-4 group-hover:shadow group-hover:shadow-primary-500/30 group-active:shadow-inner dark:border-slate-600 dark:bg-slate-700">
 												<div className="w-full blur-[1px] grayscale transition duration-150 group-hover:blur-none group-hover:grayscale-0">
 													<MDXRemote
 														{...example}
@@ -33,7 +33,9 @@ export default function Components(props: Props) {
 											</div>
 											<div>
 												<div className="text-sm font-medium">{title}</div>
-												{description ? <div className="text-xs text-gray-600">{description}</div> : null}
+												{description ? (
+													<div className="text-xs text-slate-500 dark:text-slate-400">{description}</div>
+												) : null}
 											</div>
 										</div>
 									</a>

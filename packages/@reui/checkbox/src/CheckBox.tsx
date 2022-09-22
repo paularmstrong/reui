@@ -77,18 +77,18 @@ export function CheckBox(props: CheckboxProps | CheckboxGroupProps) {
 
 				<div
 					className={clsx(
-						'flex h-4 w-4 shrink-0 rounded-sm border-2 text-white transition-colors duration-150 dark:text-gray-800',
+						'flex h-4 w-4 shrink-0 rounded-sm border text-white transition-colors duration-150 dark:text-slate-800',
 						isFocusVisible && 'ring-4 ring-primary-500/50 dark:ring-primary-400/50',
-						isDisabled && 'border-gray-200 bg-gray-100 dark:border-gray-700 dark:bg-gray-600',
+						isDisabled && 'border-slate-200 bg-slate-100 dark:border-slate-700 dark:bg-slate-600',
 						isSelected
 							? 'border-primary-500 bg-primary-500 dark:border-primary-400 dark:bg-primary-400'
-							: !isDisabled && 'border-gray-300 bg-white dark:border-gray-400 dark:bg-gray-600'
+							: !isDisabled && 'border-slate-300 bg-white dark:border-slate-500 dark:bg-slate-600'
 					)}
 				>
 					{isSelected ? <CheckIcon /> : null}
 				</div>
 
-				<div className={clsx('inline-flex flex-grow leading-3', isDisabled && 'text-gray-600 dark:text-gray-500')}>
+				<div className={clsx('inline-flex flex-grow leading-3', isDisabled && 'text-slate-600 dark:text-slate-500')}>
 					{props.children}
 					{props.isRequired ? (
 						<span aria-hidden="true" className="text-red-600 dark:text-red-400">

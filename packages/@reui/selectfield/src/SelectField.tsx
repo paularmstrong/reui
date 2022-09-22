@@ -37,10 +37,10 @@ export function SelectField<T extends Record<string, unknown>>(props: AriaSelect
 		<div className="w-full">
 			<div
 				className={clsx(
-					'relative flex h-14 items-center rounded border-2 bg-white dark:bg-gray-800',
+					'relative flex h-14 items-center rounded border bg-white dark:bg-slate-900',
 					isFocusVisible && 'ring-4 ring-primary-500/50 dark:ring-primary-400/50',
 					props.isDisabled && 'cursor-not-allowed opacity-70',
-					props.errorMessage ? 'border-red-600 dark:border-red-400' : 'border-gray-200 dark:border-gray-600'
+					props.errorMessage ? 'border-red-600 dark:border-red-400' : 'border-slate-200 dark:border-slate-600'
 				)}
 			>
 				<button {...mergeProps(buttonProps, focusProps)} className="absolute inset-0 outline-none" ref={triggerRef}>
@@ -57,7 +57,7 @@ export function SelectField<T extends Record<string, unknown>>(props: AriaSelect
 						<div
 							{...labelProps}
 							className={clsx(
-								'absolute top-3 inline-flex w-full transform gap-1 overflow-hidden text-ellipsis rounded bg-white transition-[font-size,color,transform] duration-100 ease-in-out dark:bg-gray-800',
+								'absolute top-3 inline-flex w-full transform gap-1 overflow-hidden text-ellipsis rounded bg-white transition-[font-size,color,transform] duration-100 ease-in-out dark:bg-slate-900',
 								Boolean(state.selectedItem) &&
 									'-translate-y-2 text-xs font-medium text-primary-700 dark:text-primary-300'
 							)}
@@ -71,7 +71,7 @@ export function SelectField<T extends Record<string, unknown>>(props: AriaSelect
 						</div>
 					</div>
 
-					<span className="relative z-10 w-4 text-base text-gray-800 dark:text-gray-300">
+					<span className="relative z-10 w-4 text-base text-slate-800 dark:text-slate-300">
 						{state.isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
 					</span>
 				</div>

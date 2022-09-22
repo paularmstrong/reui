@@ -11,34 +11,31 @@ interface SharedButtonProps extends AriaButtonProps {
 	buttonStyle?: 'primary' | 'secondary' | 'plain';
 }
 
-const ButtonElement = {
-	primary: PrimaryButton,
-	secondary: SecondaryButton,
-	plain: PlainButton,
-};
-
-export function Button({ buttonStyle = 'primary', ...props }: SharedButtonProps) {
-	const Element = ButtonElement[buttonStyle];
-	return <Element {...props} />;
-}
-
 interface ButtonProps extends AriaButtonProps {
 	className?: string;
 	color?: Color;
 }
 
-function PrimaryButton({ color = 'primary', ...props }: ButtonProps) {
-	const ref = React.useRef<HTMLDivElement | HTMLAnchorElement>(null);
+const PrimaryButton = React.forwardRef<HTMLDivElement | HTMLAnchorElement, ButtonProps>(function PrimaryButton(
+	{ color = 'primary', ...props },
+	ref
+) {
+	const innerRef = React.useRef<HTMLDivElement | HTMLAnchorElement>(null);
+	const elRef = ref || innerRef;
 	const Element = props.href ? 'a' : 'div';
-	const { buttonProps } = useButton({ ...props, type: 'button', elementType: Element }, ref);
+	const { buttonProps } = useButton(
+		{ ...props, type: 'button', elementType: Element },
+		// @ts-ignore
+		elRef
+	);
 
 	return (
 		<Element
 			{...buttonProps}
 			// @ts-ignore no good way to do this
-			ref={ref}
+			ref={elRef}
 			className={clsx(
-				'inline-flex cursor-pointer flex-row items-center gap-2 space-x-1 whitespace-nowrap rounded px-4 py-2 text-lg font-bold text-white shadow outline-none transition hover:shadow-md focus:shadow-xl focus:outline-none focus:ring-4',
+				'inline-flex cursor-pointer flex-row items-center gap-2 space-x-1 whitespace-nowrap rounded px-4 py-2 text-lg font-bold text-white shadow outline-none transition hover:shadow-md focus:shadow-xl focus:outline-none focus:ring-4 active:shadow-inner',
 				props.isDisabled
 					? 'cursor-not-allowed bg-gray-400'
 					: {
@@ -55,18 +52,26 @@ function PrimaryButton({ color = 'primary', ...props }: ButtonProps) {
 			{props.children}
 		</Element>
 	);
-}
+});
 
-function PlainButton({ color = 'primary', ...props }: ButtonProps) {
-	const ref = React.useRef<HTMLDivElement | HTMLAnchorElement>(null);
+const PlainButton = React.forwardRef<HTMLDivElement | HTMLAnchorElement, ButtonProps>(function PlainButton(
+	{ color = 'primary', ...props },
+	ref
+) {
+	const innerRef = React.useRef<HTMLDivElement | HTMLAnchorElement>(null);
+	const elRef = ref || innerRef;
 	const Element = props.href ? 'a' : 'div';
-	const { buttonProps } = useButton({ ...props, type: 'button', elementType: Element }, ref);
+	const { buttonProps } = useButton(
+		{ ...props, type: 'button', elementType: Element },
+		// @ts-ignore
+		elRef
+	);
 
 	return (
 		<Element
 			{...buttonProps}
 			// @ts-ignore no good way to do this
-			ref={ref}
+			ref={elRef}
 			className={clsx(
 				'inline-flex cursor-pointer flex-row items-center gap-2 space-x-1 whitespace-nowrap rounded px-4 py-2 text-lg font-bold outline-none transition focus:outline-none focus:ring-4',
 				props.isDisabled
@@ -87,18 +92,26 @@ function PlainButton({ color = 'primary', ...props }: ButtonProps) {
 			{props.children}
 		</Element>
 	);
-}
+});
 
-function SecondaryButton({ color = 'primary', ...props }: ButtonProps) {
-	const ref = React.useRef<HTMLDivElement | HTMLAnchorElement>(null);
+const SecondaryButton = React.forwardRef<HTMLDivElement | HTMLAnchorElement, ButtonProps>(function SecondaryButton(
+	{ color = 'primary', ...props },
+	ref
+) {
+	const innerRef = React.useRef<HTMLDivElement | HTMLAnchorElement>(null);
+	const elRef = ref || innerRef;
 	const Element = props.href ? 'a' : 'div';
-	const { buttonProps } = useButton({ ...props, type: 'button', elementType: Element }, ref);
+	const { buttonProps } = useButton(
+		{ ...props, type: 'button', elementType: Element },
+		// @ts-ignore
+		elRef
+	);
 
 	return (
 		<Element
 			{...buttonProps}
 			// @ts-ignore no good way to do this
-			ref={ref}
+			ref={elRef}
 			className={clsx(
 				'inline-flex cursor-pointer flex-row items-baseline gap-2 space-x-1 whitespace-nowrap rounded px-4 py-2 text-lg font-bold outline-none transition focus:outline-none focus:ring-4',
 				props.isDisabled
@@ -119,4 +132,18 @@ function SecondaryButton({ color = 'primary', ...props }: ButtonProps) {
 			{props.children}
 		</Element>
 	);
-}
+});
+
+const ButtonElement = {
+	primary: PrimaryButton,
+	secondary: SecondaryButton,
+	plain: PlainButton,
+};
+
+export const Button = React.forwardRef<HTMLDivElement | HTMLAnchorElement, SharedButtonProps>(function Button(
+	{ buttonStyle = 'primary', ...props },
+	ref
+) {
+	const Element = ButtonElement[buttonStyle];
+	return <Element {...props} ref={ref} />;
+});
